@@ -1,0 +1,100 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SiteMaster.master.cs" Inherits="Wywrotka.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+   
+     <title>Wywrotka</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <%-- navigation --%>
+         <nav class="navbar navbar-toggleable-md navbar-inverse bg-faded no-padding no-margin no-border fixed-top" role="navigation">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+                <img class="img-fluid" src="img/wywrotka_logo.png" style="max-height: 2em;" />
+            </a>
+            <div class="container align-content-center">
+
+                <div class="navbar-collapse collapse row" id="navbarToggler">
+                    <div class="col-md-8 offset-2">
+                        <ul class="navbar-nav mr-auto mt-2 mt-md-0">
+                            <li class="nav-item"><a class="nav-link" href="index.aspx">O NAS</a></li>
+                            <li class="nav-item"><a class="nav-link" href="offer.aspx">OFERTA</a></li>
+                            <li class="nav-item"><a class="nav-link" href="gallery.aspx">GALERIA</a></li>
+                            <li class="nav-item"><a class="nav-link" href="events.aspx">KALENDARZ IMPREZ</a></li>
+                            <li class="nav-item"><a class="nav-link" href="rules.aspx">REGULAMIN</a></li>
+                            <li class="nav-item"><a class="nav-link" href="contact.aspx">KONTAKT</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-1 offset-1">
+                        <ul class="navbar-nav navbar-right mt-2 mt-md-0">
+                            <li class="nav-item">
+                                <a class="nav-social-a" href="#">
+                                    <i class="fa fa-facebook-square"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-social-a" href="#">
+                                    <i class="fa fa-instagram"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div>
+            <asp:ContentPlaceHolder ID="MasterBody" runat="server">
+
+            </asp:ContentPlaceHolder>
+             <footer class="footer">
+                <div class="row">
+                    <div class="col-md-4 offset-4">
+                        <a class="footer-a" href="#">
+                            <i class="fa fa-facebook-square"></i>
+                        </a>
+                        <a class="footer-a" href="#">
+                            <i class="fa fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <p class="offset-4 col-md-4 text-center">Co ma być w stopce?</p>
+                </div>
+        </footer>
+
+        <%--scripts--%>
+        <script src="js/jquery-3.2.1.js" type="text/javascript"></script>
+        <script src="js/bootstrap.js" type="text/javascript"></script>
+        <script type="text/javascript">
+
+            $("#btn-change-width").click(function () {
+                $('#col7first').css('max-width', '10%');
+
+                $('#col7last').css('max-width', '90%');
+            });
+
+
+            $('#ShowAllImg').click(function () {
+                $("div.imgRow").toggle();
+                if ($(this).text === "Pokaż wszystkie") {
+                    $(this).text = "Schowaj";
+                }
+                else {
+                    $(this).text = "Pokaż wszystkie";
+                }
+            });
+        </script>
+        </div>
+    </form>
+</body>
+</html>

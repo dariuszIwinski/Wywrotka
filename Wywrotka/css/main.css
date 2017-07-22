@@ -1,0 +1,233 @@
+﻿body, html {
+    height: 100%;
+}
+
+
+.no-border {
+    border: 0;
+}
+
+.no-margin {
+    margin: 0;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+
+.container {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.navbar-inverse {
+    border-radius: 0;
+    background-color: black;
+    color: white;
+    background-color: rgb(16,23,57);
+}
+
+@media (min-width: 768px) {
+    .navbar-nav {
+        width: 100%;
+        z-index: 3;
+    }
+
+    .navbar-inverse .navbar-nav > li > a {
+        color: rgb(238,92,160);
+    }
+
+        .navbar-inverse .navbar-nav > li > a:hover {
+            color: rgb(129,72,155);
+        }
+}
+
+.nav-social-a i {
+    font-size: 1.3em;
+}
+
+.navbar-toggleable-md .navbar-nav .nav-link {
+    padding-right: 1em;
+    padding-left: 1em;
+}
+
+
+
+.nav-item .nav-link {
+    color: rgb(129,72,155) !important;
+    text-shadow: -1px 0 rgb(238,92,160), 0 1px rgb(238,92,160), 1px 0 rgb(238,92,160), 0 -1px rgb(238,92,160);
+}
+
+    .nav-item .nav-link:hover {
+        color: rgb(238,92,160) !important;
+        text-shadow: -1px 0 rgb(129,72,155), 0 1px rgb(129,72,155), 1px 0 rgb(129,72,155), 0 -1px rgb(129,72,155);
+    }
+
+.navbar-right .nav-item 
+{
+    padding: 0.5em;
+}
+
+
+.h3 {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.h4 {
+    padding: 5%;
+}
+
+.offer-img {
+    min-width: 40%;
+    width: 70%;
+    max-width: 100%;
+    height: auto;
+}
+
+
+.pricing-wrapper {
+    text-align: center;
+    border: solid 2px;
+    border-color: rgb(238,92,160);
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.pricing-header {
+    font-size: 2em;
+    padding: 0.5em;
+}
+
+.pricing-description {
+    color: grey;
+}
+
+.pricing-table table {
+    width: 80%;
+    margin: 1% 10% 5% 10%;
+}
+
+.pricing-table td {
+    padding: 3%;
+    width: 50%;
+}
+
+.table-bordered th, .table-bordered td {
+    border: 1px solid rgb(129,72,155) !important;
+}
+
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgb(50,100,140);
+}
+
+.gallery-container {
+    padding: 2%;
+}
+
+    .gallery-container:hover .overlay {
+        opacity: 1;
+    }
+
+.image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.text {
+    color: white;
+    font-size: 1em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.footer {
+    background-color: black;
+    color: white;
+    min-height: 4em;
+    max-height: 4em;
+}
+
+/*.footer-a {
+    margin: 10%;
+}*/
+
+    /*.footer-a i {
+        min-height: 20%;
+        padding: 10%;
+        font-size: 1em;
+        color: white;
+    }*/
+
+
+/**glowne zdjecie
+.main-image {
+    background-image: url('https://s-media-cache-ak0.pinimg.com/originals/1c/f8/a2/1cf8a2c00f86bbf6d468abf8a96109e4.jpg');
+    min-height: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    padding: 10% 10% 20% 5%;
+}
+
+.main-image-text {
+    padding: 10%;
+    text-align: center;
+    color: white;
+}
+    .main-image-text h1 {
+        margin: 0;
+        font-size: 6em;
+        font-weight: 600;
+    }
+    .main-image-text p {
+        font-size: 2em;
+        font-weight: 200;
+    }*/
+/*parallax*/
+.parallax {
+    background-image: url('img_parallax.jpg');
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container-main {
+    display: block;
+    background-image: url('../img/bg1920.jpg') !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    height: auto !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    color: #fff;
+
+    padding-top: 50px;
+}
+
+@font-face {
+    font-family: 'frino';
+    src: url('../fonts/frino.ttf') format('truetype');
+}
+.h1, .h2, .h3 {
+    font: 'frino';
+}
