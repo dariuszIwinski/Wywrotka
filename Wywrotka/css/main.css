@@ -1,4 +1,10 @@
-﻿body, html {
+﻿@font-face {
+    font-family: 'avene';
+    src: url('../fonts/Avene.otf') format('opentype');
+}
+
+
+body, html {
     height: 100%;
 }
 
@@ -22,53 +28,7 @@
     height: 100%;
 }
 
-.navbar-inverse {
-    border-radius: 0;
-    background-color: black;
-    color: white;
-    background-color: rgb(16,23,57);
-}
 
-@media (min-width: 768px) {
-    .navbar-nav {
-        width: 100%;
-        z-index: 3;
-    }
-
-    .navbar-inverse .navbar-nav > li > a {
-        color: rgb(238,92,160);
-    }
-
-        .navbar-inverse .navbar-nav > li > a:hover {
-            color: rgb(129,72,155);
-        }
-}
-
-.nav-social-a i {
-    font-size: 1.3em;
-}
-
-.navbar-toggleable-md .navbar-nav .nav-link {
-    padding-right: 1em;
-    padding-left: 1em;
-}
-
-
-
-.nav-item .nav-link {
-    color: rgb(129,72,155) !important;
-    text-shadow: -1px 0 rgb(238,92,160), 0 1px rgb(238,92,160), 1px 0 rgb(238,92,160), 0 -1px rgb(238,92,160);
-}
-
-    .nav-item .nav-link:hover {
-        color: rgb(238,92,160) !important;
-        text-shadow: -1px 0 rgb(129,72,155), 0 1px rgb(129,72,155), 1px 0 rgb(129,72,155), 0 -1px rgb(129,72,155);
-    }
-
-.navbar-right .nav-item 
-{
-    padding: 0.5em;
-}
 
 
 .h3 {
@@ -116,7 +76,8 @@
 }
 
 .table-bordered th, .table-bordered td {
-    border: 1px solid rgb(129,72,155) !important;
+    border: 1px solid rgb(238,92,160) !important;
+    vertical-align: middle;
 }
 
 
@@ -142,7 +103,6 @@
     }
 
 .image {
-    display: block;
     width: 100%;
     height: auto;
 }
@@ -158,49 +118,21 @@
 }
 
 .footer {
-    background-color: black;
+    background-color: rgb(16,23,57);
     color: white;
     min-height: 4em;
-    max-height: 4em;
 }
 
-/*.footer-a {
-    margin: 10%;
-}*/
 
-    /*.footer-a i {
-        min-height: 20%;
-        padding: 10%;
-        font-size: 1em;
-        color: white;
-    }*/
-
-
-/**glowne zdjecie
-.main-image {
-    background-image: url('https://s-media-cache-ak0.pinimg.com/originals/1c/f8/a2/1cf8a2c00f86bbf6d468abf8a96109e4.jpg');
-    min-height: 50%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    padding: 10% 10% 20% 5%;
-}
-
-.main-image-text {
-    padding: 10%;
-    text-align: center;
+.footer-a i {
+    font-size: 2em;
     color: white;
 }
-    .main-image-text h1 {
-        margin: 0;
-        font-size: 6em;
-        font-weight: 600;
-    }
-    .main-image-text p {
-        font-size: 2em;
-        font-weight: 200;
-    }*/
+
+.footer-a i:hover {
+    color: rgb(238,92,160);
+}
+
 /*parallax*/
 .parallax {
     background-image: url('img_parallax.jpg');
@@ -213,21 +145,74 @@
 
 .container-main {
     display: block;
-    background-image: url('../img/bg1920.jpg') !important;
-    background-size: cover !important;
+    background-color: white;
+    background-size: contain !important;
     background-repeat: no-repeat !important;
     height: auto !important;
     width: 100% !important;
     margin: 0 auto !important;
-    color: #fff;
-
-    padding-top: 50px;
+    color: rgb(16,23,57);
+    padding-top: 50px;  
 }
 
-@font-face {
-    font-family: 'frino';
-    src: url('../fonts/frino.ttf') format('truetype');
+
+h1, h2, h3, .h1, .h2, .h3 {
+    font-family: avene;
 }
-.h1, .h2, .h3 {
-    font: 'frino';
+
+
+.white-border {
+    border: 2px solid rgb(16,23,57);
+}
+
+a, a:hover, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+
+.btn-default {
+    color: white;
+    background: rgb(16,23,57);
+}
+
+
+.header-background {
+    background: rgb(16,23,57);
+    color: white;
+    width: 30%;
+    border-radius: 200px;
+    min-height: 4em;
+}
+
+
+.contant-elements .fa {
+    font-size: 2em !important;
+}
+
+#about_logo_black {
+    text-align: center;
+    background-image: url('../img/logo_black.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: auto;
+    min-height: 30vh; 
+}
+
+#about_logo_black:hover {
+    background-image: url('../img/wywrotka_logo.png');
+}
+.about-heading
+{
+    border: 1px solid rgb(16,23,57);
+}
+
+.about-heading h3 {
+    color: rgb(238,92,160);
+    text-align: center;
+}
+
+hr{
+    border-top: rgb(16,23,57) 1px solid;
 }

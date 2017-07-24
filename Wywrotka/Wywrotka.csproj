@@ -68,13 +68,27 @@
     <Content Include="contact.aspx" />
     <Content Include="css\frino\frinostyle.css" />
     <Content Include="css\frino\frinostyle.min.css" />
+    <Content Include="css\gallery.css" />
     <Content Include="css\zero.css" />
     <Content Include="events.aspx" />
     <Content Include="gallery.aspx" />
     <Content Include="img\bg1920.jpg" />
+    <Content Include="img\birthday_party.png" />
+    <Content Include="img\bride_rollers.jpg" />
+    <Content Include="img\img100.jpg" />
+    <Content Include="img\img101.png" />
+    <Content Include="img\img102.jpg" />
+    <Content Include="img\img103.png" />
+    <Content Include="img\img104.jpg" />
+    <Content Include="img\logo_black.png" />
+    <Content Include="img\oartyyyyy.jpg" />
+    <Content Include="img\rollers.jpg" />
+    <Content Include="img\tlo.png" />
     <Content Include="img\wywrotka_logo.png" />
     <Content Include="css\navigation.css" />
     <Content Include="index.aspx" />
+    <Content Include="js\tether.js" />
+    <Content Include="js\utils.js" />
     <Content Include="offer.aspx" />
     <Content Include="packages.config" />
     <Content Include="css\bootstrap\bootstrap-grid.css.map" />
@@ -87,6 +101,11 @@
     <Content Include="rules.aspx" />
     <Content Include="SiteMaster.Master" />
     <Content Include="fonts\frino.ttf" />
+    <Content Include="fonts\frino.woff" />
+    <Content Include="fonts\frino.woff2" />
+    <Content Include="fonts\Avene.otf" />
+    <Content Include="fonts\Avene.woff" />
+    <Content Include="fonts\Avene.woff2" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
