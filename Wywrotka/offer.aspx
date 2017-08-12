@@ -7,22 +7,32 @@
     <link href="css/navigation.css" rel="stylesheet" type="text/css" />
     <link href="css/frino/frinostyle.css" rel="stylesheet" />
     <link href="css/main.css" rel="stylesheet" type="text/css" />
-    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
+
+      <%-- fonts --%>
+        <link href="https://fonts.googleapis.com/css?family=Ribeye+Marrow&amp;subset=latin-ext" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Zilla+Slab" rel="stylesheet">
+    <style>
+        @media (min-width: 768px) 
+        {
+        .mb-md-5 {
+            margin-bottom: 11rem!important;
+        }
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MasterBody" runat="server">
-        <%-- navigation --%>
-    <nav class="navbar navbar-toggleable-md navbar-inverse bg-faded no-padding no-margin no-border fixed-top" role="navigation">
+        <nav class="navbar navbar-toggleable-md navbar-inverse bg-faded no-padding no-margin no-border fixed-top pt-1 pb-1" role="navigation">
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand p-0 m-0" href="#">
+        <a class="navbar-brand p-0 m-0" href="index.aspx">
             <img class="img-fluid" src="img/wywrotka_logo.png" style="max-height: 2em;" />
         </a>
         <div class="container align-content-center m-0 p-0">
 
-            <div class="navbar-collapse collapse row" id="navbarToggler">
-                <div class="col-md-8 offset-3">
-                    <ul class="navbar-nav mr-auto mt-2 mt-md-0">
+            <div class="navbar-collapse collapse row no-gutters" id="navbarToggler">
+                    <div class="col-8 offset-3 col-md-9 offset-md-1 p-0">
+                    <ul class="navbar-nav mr-auto mt-2 mt-md-0 main-nav">
                         <li class="nav-item pt-1 pb-1"><a class="nav-link" href="index.aspx">O NAS</a></li>
                         <li class="nav-item pt-1 pb-1 active"><a class="nav-link" href="offer.aspx">OFERTA</a></li>
                         <li class="nav-item pt-1 pb-1"><a class="nav-link" href="gallery.aspx">GALERIA</a></li>
@@ -31,7 +41,7 @@
                         <li class="nav-item pt-1 pb-1"><a class="nav-link" href="contact.aspx">KONTAKT</a></li>
                     </ul>
                 </div>
-                <div class="col-md-1 offset-1 m-0 p-0">
+                <div class="col-8 offset-3 col-md-1 offset-md-1 p-0">
                     <ul class="navbar-nav navbar-right mt-2 md-0">
                         <li class="nav-item pt-1 pb-1">
                             <a class="nav-social-a" href="#">
@@ -53,35 +63,35 @@
         </div>
     </div>
     <div class="container container-main">
-         <div class="row">
-            <div class="col-12 text-justify">
-                <div class="header-background col-4 offset-4">
-                    <h1 class="h1 text-center pt-1 pb-1">Let's roll</h1>
+        <div class="row no-gutters">
+            <div class="col-12">
+                <div class="header-background text-center">
+                    <h1 class="h1">Let's roll</h1>
                 </div>
             </div>
         </div>
-        <div class="row mt-5">
+        <div class="row mt-5 no-gutters">
             <%--prices--%>
-            <div class="col-5 offset-1">
-                <div class="white-border p-3">
+            <div class="col-10 col-md-5 offset-1 offset-md-1">
+                <div class="white-border p-3 mb-5 mb-md-0">
                     <div class="row pt-3 pb-3">
                         <div class="col-12  text-center">
                             <h2 class="h2 text-center">Cennik</h2>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-8 offset-2 text-center">
-                            <table class="table table-hover table-bordered w-100">
+                        <div class="col-10 offset-1 text-center">
+                            <table class="table table-hover table-bordered w-100 h-100">
                                 <tr>
                                     <th colspan="2" class="text-center font-weight-bold">Bilety indywidualne</th>
                                 </tr>
                                 <tr>
                                     <td>Ulgowy</td>
-                                    <td>10 zł / 1 h</td>
+                                    <td>10 zł/h</td>
                                 </tr>
                                 <tr>
                                     <td>Normalny</td>
-                                    <td>15 zł / 1 h</td>
+                                    <td>15 zł/h</td>
                                 </tr>
                                 <tr>
                                     <td>Wypożyczenie wrotek</td>
@@ -94,24 +104,26 @@
                                 </tr>
                                 <tr>
                                     <td>Indywidualna lekcja z instruktorem</td>
-                                    <td>50 zł / h</td>
+                                    <td>50 zł/h</td>
                                 </tr>
                             </table>
                         </div>
 
                     </div>
                     <div class="row">
-                        <p class="text-center w-100">Dokumentem uprawniającym do karnetu ulgowego<br /> jest ważna legitymacja szkolna.</p>
+                        <p class="text-center w-100">Dokumentem uprawniającym do karnetu ulgowego<br />
+                            jest ważna legitymacja szkolna.</p>
                     </div>
                     <div class="row">
-                        <div class="col-8 offset-2 text-center">
-                            <table class="table table-hover table-bordered w-100">
+                        <div class="col-10 offset-1 text-center">
+                            <table class="table table-hover table-bordered w-100 h-100">
                                 <tr>
-                                    <th colspan="2" class="text-center font-weight-bold">Grupy zorganizowane (min. 10 osób)</th>
+                                    <th colspan="2" class="text-center font-weight-bold">Grupy zorganizowane<br />
+                                        (min. 10 osób)</th>
                                 </tr>
                                 <tr>
                                     <td>Bilet</td>
-                                    <td>8 zł / 1 h</td>
+                                    <td>8 zł/h</td>
 
                                 </tr>
                                 <tr>
@@ -124,16 +136,16 @@
                 </div>
             </div>
             <%--oppenings--%>
-            <div class="col-5">
+            <div class="col-10 offset-1 col-md-5 offset-md-0" id="openings">
                 <div class="white-border p-3">
                     <div class="row pt-3 pb-3">
                         <div class="col-12  text-center">
                             <h2 class="h2 text-center">Godziny otwarcia</h2>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-8 offset-2 text-center">
-                            <table class="table table-hover table-bordered w-10">
+                    <div class="row mb-md-5">
+                        <div class="col-10 offset-1 text-center">
+                            <table class="table table-hover table-bordered w-100 h-100">
                                 <tr>
                                     <th class="text-center font-weight-bold">Dzień</th>
                                     <th class="text-center font-weight-bold">Godziny otwarcia</th>
@@ -160,21 +172,21 @@
                                 </tr>
                                 <tr>
                                     <td>Sobota</td>
-                                    <td>10 - ost klient (24)</td>
+                                    <td>10 - ostatni klient (24)</td>
                                 </tr>
                                 <tr>
                                     <td>Niedziela</td>
-                                    <td>10 - ost klient (24)</td>
+                                    <td>10 - ostatni klient (24)</td>
                                 </tr>
                             </table>
                         </div>
                     </div>
-                     <div class="mb-5"><br /></div>
-                    <div class="mb-5 pb-2"><br /></div>
+                    <%--                     <div class="mb-5"><br /></div>
+                    <div class="mb-5 pb-2"><br /></div>--%>
                 </div>
             </div>
         </div>
-        <div class="row mt-5">
+        <div class="row no-gutters mt-5">
             <div class="col-10 offset-1">
                 <div class="row">
                     <div class="col-3">
@@ -194,7 +206,7 @@
                 </div>
             </div>
         </div>
-        <div class="row mt-3">
+        <div class="row no-gutters mt-3">
             <div class="col-10 offset-1">
                 <div class="row">
                     <div class="col-3">
@@ -207,14 +219,14 @@
                             Ślub twojej koleżanki tuż tuż? Nie szkodzi!
                         </p>
                         <p>
-                           Pomóż jej wygodnie dojechać na wesele i zabierz ją na wrotki. Wybierzcie się w podróż w kosmicznym blasku tysięcy kolorowych świateł i zawrotnym rytmie Roller Disco
+                            Pomóż jej wygodnie dojechać na wesele i zabierz ją na wrotki. Wybierzcie się w podróż w kosmicznym blasku tysięcy kolorowych świateł i zawrotnym rytmie Roller Disco
                         </p>
                         <p><a href="">więcej...</a></p>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row mt-3 pb-3">
+        <div class="row no-gutters mt-3 pb-3">
             <div class="col-10 offset-1">
                 <div class="row">
                     <div class="col-3">
@@ -228,6 +240,26 @@
                         </p>
                         <p>
                             Szukasz czegoś tylko dla siebie, chciałbyś zaskoczyć rodzinę lub znajomych z pracy. Teraz masz okazję . Imprezy prywatne, firmowe, integracyjne i wiele innych . Nie    krępuj się i przejmij dowodzenie nad wrotkarnią
+                        </p>
+                        <p><a href="#">więcej...</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+                <div class="row no-gutters mt-3 pb-3">
+            <div class="col-10 offset-1">
+                <div class="row">
+                    <div class="col-3">
+                        <img class="img-fluid" src="img/offer_learn.jpg" />
+                    </div>
+                    <div class="col-9">
+                        <h2>Warsztaty nauki jazdy
+                        </h2>
+                        <p>
+                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
                         </p>
                         <p><a href="#">więcej...</a></p>
                     </div>

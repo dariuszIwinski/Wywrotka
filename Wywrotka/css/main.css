@@ -1,13 +1,14 @@
-﻿@font-face {
-    font-family: 'avene';
-    src: url('../fonts/Avene.otf') format('opentype');
-}
-
-
+﻿
 body, html {
     height: 100%;
+    font-family: 'Zilla Slab', serif;
 }
-
+/*body {
+    overflow-x: hidden;
+}*/
+/** {
+    border: 1px solid red !important;
+}*/
 
 .no-border {
     border: 0;
@@ -129,9 +130,9 @@ body, html {
     color: white;
 }
 
-.footer-a i:hover {
-    color: rgb(238,92,160);
-}
+    .footer-a i:hover {
+        color: rgb(238,92,160);
+    }
 
 /*parallax*/
 .parallax {
@@ -152,12 +153,14 @@ body, html {
     width: 100% !important;
     margin: 0 auto !important;
     color: rgb(16,23,57);
-    padding-top: 50px;  
+    padding-top: 50px;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 
 h1, h2, h3, .h1, .h2, .h3 {
-    font-family: avene;
+    font-family: 'Ribeye Marrow';
 }
 
 
@@ -181,15 +184,26 @@ a, a:hover, a:active {
 .header-background {
     background: rgb(16,23,57);
     color: white;
-    width: 30%;
-    border-radius: 200px;
-    min-height: 4em;
+    width: 100%;
+    padding: 1%;
 }
 
-
-.contant-elements .fa {
-    font-size: 2em !important;
+.contant-elements {
+    font-size: 1.2em;
 }
+
+    .contant-elements .fa {
+        font-size: 1.2em !important;
+    }
+
+@media (min-width: 1000px) {
+    .contant-elements {
+        text-align: center !important;
+    }
+
+
+}
+
 
 #about_logo_black {
     text-align: center;
@@ -197,22 +211,98 @@ a, a:hover, a:active {
     background-size: contain;
     background-repeat: no-repeat;
     width: auto;
-    min-height: 30vh; 
+    min-height: 10vh;
 }
 
-#about_logo_black:hover {
-    background-image: url('../img/wywrotka_logo.png');
-}
-.about-heading
-{
-    border: 1px solid rgb(16,23,57);
+    #about_logo_black:hover {
+        background-image: url('../img/wywrotka_logo.png');
+    }
+@media (min-width: 1000px) {
+
+    #about_logo_black {
+        min-height: 30vh;
+    }
 }
 
-.about-heading h3 {
-    color: rgb(238,92,160);
+
+
+    .about-heading {
+        border: 2px solid rgb(16,23,57);
+    }
+
+        .about-heading h3 {
+            color: rgb(238,92,160);
+            text-align: center;
+        }
+
+    hr {
+        border-top: rgb(16,23,57) 2px solid;
+    }
+
+
+    /*google maps*/
+    .iframe-container {
+        position: relative;
+        width: 100%;
+        padding-bottom: 56.25%; /* Ratio 16:9 ( 100%/16*9 = 56.25% ) */
+    }
+
+        .iframe-container > * {
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+        }
+
+/*O nas timeline*/
+@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */
+    .margBottom {
+        margin-bottom: 10rem !important;
+    }
+    .borderRight {
+        border-right: 5px solid rgb(13, 12, 68);
+    }
+    .marginTop {
+        margin-top: 10rem !important;
+    }
+}
+
+
+.hideme {
+    opacity: 0;
+}
+
+.arrow {
     text-align: center;
+    margin: 8% 0;
 }
 
-hr{
-    border-top: rgb(16,23,57) 1px solid;
+.bounce {
+    -moz-animation: bounce 2s infinite;
+    -webkit-animation: bounce 2s infinite;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-30px);
+    }
+
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+.gallery-title:hover {
+    color: rgb(238,92,160);
 }

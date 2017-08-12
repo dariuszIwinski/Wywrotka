@@ -1,4 +1,7 @@
 ﻿
+a{
+    font-size: 1.2rem;
+}
 
 @media (min-width: 768px) {
     .navbar-nav {
@@ -12,6 +15,7 @@
 }
     .navbar-inverse .navbar-nav .nav-link {
         color: rgb(16,23,57);
+        letter-spacing: 2px !important;
     }
 
     .nav-item   .acite, .navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li.active {
