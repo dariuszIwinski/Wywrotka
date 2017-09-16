@@ -68,7 +68,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Administration.aspx" />
+    <Content Include="Admin\AdminLogin.aspx" />
+    <Content Include="Admin\EventsManger.aspx" />
+    <Content Include="Admin\Pictures.aspx" />
     <Content Include="contact.aspx" />
     <Content Include="css\fa\css\font-awesome.css" />
     <Content Include="css\fa\css\font-awesome.min.css" />
@@ -85,6 +87,9 @@
     <Content Include="img\bg1920.jpg" />
     <Content Include="img\birthday_party.png" />
     <Content Include="img\bride_rollers.jpg" />
+    <Content Include="img\dottedLine.png" />
+    <Content Include="img\dottedLine_first.png" />
+    <Content Include="img\dottedLine_reverse.png" />
     <Content Include="img\elipseWywrotka.png" />
     <Content Include="img\favicon.png" />
     <Content Include="img\heading_background.png" />
@@ -96,11 +101,13 @@
     <Content Include="img\logo_black.png" />
     <Content Include="img\oartyyyyy.jpg" />
     <Content Include="img\offer_learn.jpg" />
+    <Content Include="img\old_rollers.jpg" />
     <Content Include="img\rollers.jpg" />
     <Content Include="img\tlo.png" />
     <Content Include="img\wywrotka_logo.png" />
     <Content Include="css\navigation.css" />
     <Content Include="index.aspx" />
+    <Content Include="js\jqueryAppear.js" />
     <Content Include="js\tether.js" />
     <Content Include="js\utils.js" />
     <Content Include="offer.aspx" />
@@ -180,12 +187,26 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Administration.aspx.cs">
-      <DependentUpon>Administration.aspx</DependentUpon>
+    <Compile Include="Admin\AdminLogin.aspx.cs">
+      <DependentUpon>AdminLogin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Administration.aspx.designer.cs">
-      <DependentUpon>Administration.aspx</DependentUpon>
+    <Compile Include="Admin\AdminLogin.aspx.designer.cs">
+      <DependentUpon>AdminLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\EventsManger.aspx.cs">
+      <DependentUpon>EventsManger.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\EventsManger.aspx.designer.cs">
+      <DependentUpon>EventsManger.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Pictures.aspx.cs">
+      <DependentUpon>Pictures.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Pictures.aspx.designer.cs">
+      <DependentUpon>Pictures.aspx</DependentUpon>
     </Compile>
     <Compile Include="contact.aspx.cs">
       <DependentUpon>contact.aspx</DependentUpon>

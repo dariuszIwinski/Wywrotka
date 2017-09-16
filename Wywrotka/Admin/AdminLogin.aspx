@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SiteMaster.Master" AutoEventWireup="true" CodeBehind="Administration.aspx.cs" Inherits="Wywrotka.Administration" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SiteMaster.Master" AutoEventWireup="true" CodeBehind="AdminLogin.aspx.cs" Inherits="Wywrotka.Administration" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <%--css--%>

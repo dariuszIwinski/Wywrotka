@@ -137,7 +137,7 @@
             </div>
             <%--oppenings--%>
             <div class="col-10 offset-1 col-md-5 offset-md-0" id="openings">
-                <div class="white-border p-3">
+                <div class="white-border p-3 ml-md-2">
                     <div class="row pt-3 pb-3">
                         <div class="col-12  text-center">
                             <h2 class="h2 text-center">Godziny otwarcia</h2>

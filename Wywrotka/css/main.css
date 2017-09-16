@@ -306,3 +306,48 @@ a, a:hover, a:active {
 .gallery-title:hover {
     color: rgb(238,92,160);
 }
+
+
+.skw {
+    text-align: center;
+    -webkit-transform: skew(-18deg);
+    -moz-transform: skew(-18deg);
+    transform: skew(-18deg);
+    z-index: 40;
+}
+
+
+.darkblue {
+    background-color: rgb(16,23,57);
+}
+
+.pink {
+    background-color: rgb(238,92,160);
+}
+
+.white
+{
+    background-color: white;
+}
+
+.elipsa {
+    width: 400px;
+    height: 200px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    border-radius: 200px / 100px;
+    -moz-border-radius: 100px / 50px;
+    transform: rotate(-10deg);
+    -webkit-transform: rotate(-10deg);
+    -moz-transform: rotate(-10deg);
+    -o-transform: rotate(-10deg);
+}
+
+.flip {
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+}
