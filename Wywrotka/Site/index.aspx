@@ -1,12 +1,12 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SiteMaster.Master" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="Wywrotka.index" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site/SiteMaster.Master" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="Wywrotka.index" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <%--css--%>
-    <link href="css/zero.css" rel="stylesheet" />
-    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link href="css/navigation.css" rel="stylesheet" type="text/css" />
-    <link href="css/frino/frinostyle.css" rel="stylesheet" />
-    <link href="css/main.css" rel="stylesheet" type="text/css" />
+    <link href="../Styles/css/zero.css" rel="stylesheet" />
+    <link href="../Styles/css/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../Styles/css/navigation.css" rel="stylesheet" type="text/css" />
+    <link href="../Styles/css/frino/frinostyle.css" rel="stylesheet" />
+    <link href="../Styles/css/main.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
     <link rel='stylesheet prefetch' href='https://cdn.rawgit.com/michalsnik/aos/2.0.4/dist/aos.css'>
     <style>
@@ -31,7 +31,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <a class="navbar-brand p-0 m-0" href="index.aspx">
-            <img class="img-fluid" src="img/wywrotka_logo.png" style="max-height: 2em;" />
+            <img class="img-fluid" src="../Images/wywrotka_logo.png" style="max-height: 2em;" />
         </a>
         <div class="container align-content-center m-0 p-0">
 
@@ -86,7 +86,7 @@
         <div class="row no-gutters hidden-sm-down">
             <div class="col-6"></div>
             <div class="col-4">
-                <img data-aos="zoom-in" src="img/dottedLine_first.png" />
+                <img data-aos="zoom-in" src="../Images/dottedLine_first.png" />
             </div>
             <div class="col-md-4"></div>
         </div>
@@ -110,7 +110,7 @@
          <div class="row no-gutters hidden-sm-down">
             <div class="col-md-4"></div>
             <div class="col-md-4">
-                <img data-aos="zoom-in" class="" src="img/dottedLine_reverse.png" />
+                <img data-aos="zoom-in" class="" src="../Images/dottedLine_reverse.png" />
             </div>
             <div class="col-md-4"></div>
         </div>
@@ -134,7 +134,7 @@ Kawiarnia działa w tych samych godzinach, co wrotkarnia. Można wejść tu i po
          <div class="row no-gutters">
             <div class="col-md-4"></div>
             <div class="col-md-4">
-                <img data-aos="zoom-in" class="" src="img/dottedLine.png" />
+                <img data-aos="zoom-in" class="" src="../Images/dottedLine.png" />
             </div>
             <div class="col-md-4"></div>
         </div>
@@ -163,7 +163,7 @@ same Cię poprowadzą.
          <div class="row no-gutters">
             <div class="col-md-4"></div>
             <div class="col-md-4">
-                <img data-aos="zoom-in" class="" src="img/dottedLine_reverse.png" />
+                <img data-aos="zoom-in" class="" src="../Images/dottedLine_reverse.png" />
             </div>
             <div class="col-md-4"></div>
         </div>
@@ -188,7 +188,7 @@ Na torze spotkasz Strażników Galaktyki, Iron Mana i Spidermana. Be our guest, 
          <div class="row no-gutters">
             <div class="col-md-4"></div>
             <div class="col-md-4">
-                <img data-aos="zoom-in" class="" src="img/dottedLine.png" />
+                <img data-aos="zoom-in" class="" src="../Images/dottedLine.png" />
             </div>
             <div class="col-md-4"></div>
         </div>
@@ -211,7 +211,7 @@ Na torze spotkasz Strażników Galaktyki, Iron Mana i Spidermana. Be our guest, 
          <div class="row no-gutters">
             <div class="col-md-4"></div>
             <div class="col-md-4">
-                <img data-aos="zoom-in" class="" src="img/dottedLine_reverse.png" />
+                <img data-aos="zoom-in" class="" src="../Images/dottedLine_reverse.png" />
             </div>
             <div class="col-md-4"></div>
         </div>
@@ -235,7 +235,7 @@ Na torze spotkasz Strażników Galaktyki, Iron Mana i Spidermana. Be our guest, 
          <div class="row no-gutters">
             <div class="col-md-4"></div>
             <div class="col-md-4">
-                <img data-aos="zoom-in" class="" src="img/dottedLine.png" />
+                <img data-aos="zoom-in" class="" src="../Images/dottedLine.png" />
             </div>
             <div class="col-md-4"></div>
         </div>
@@ -259,160 +259,9 @@ Na torze spotkasz Strażników Galaktyki, Iron Mana i Spidermana. Be our guest, 
          <div class="row no-gutters" style="height: 6em;">
             
         </div>
-        <%--       <div class="arrow bounce">
-            <a class="fa fa-arrow-down fa-2x" style="color: deeppink;" href="javascript:void(0);"></a>
-        </div>--%>
-        <%--        <div class="row mt-5 text-justify no-gutters" id="firstSection">
-            <div class="col-8 offset-2 col-md-4 offset-md-1 about-heading mb-3 margBottom hideme" id="divRent">
-                <h3 class="m-2">Wypożyczalnia</h3>
-                <hr />
-                <p class="p-3">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-            </div>
-            <div class="col-0 offset-0 col-md-2 hideme" id="divLineOne">
-                <div class="row m-0 p-0 h-100">
-                    <div class="col-md-6 h-100 borderRight"></div>
-                    <div class="col-md-6 h-100"></div>
-                </div>
-            </div>
-            <div class="col-8 offset-2 col-md-4 offset-md-0 about-heading mt-5 marginTop hideme" id="divClimat">
-                <h3 class="m-2">Klimat</h3>
-                <hr />
-                <p class="p-3">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-            </div>
-
-            <div class="col-8 offset-2 col-md-4 offset-md-1 about-heading mb-3 margBottom hideme" id="divCoffee">
-                <h3 class="m-2">Kawiarnia</h3>
-                <hr />
-                <p class="p-3">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-            </div>
-            <div class="col-0 offset-0 col-md-2 mt-0 hideme" id="divLineTwo">
-                <div class="row m-0 p-0 h-100">
-                    <div class="col-md-6 h-100 borderRight"></div>
-                    <div class="col-md-6 h-100"></div>
-                </div>
-            </div>
-            <div class="col-8 offset-2 col-md-4 offset-md-0 about-heading mt-5 marginTop hideme" id="divFigures">
-                <h3 class="m-2">Figurki</h3>
-                <hr />
-                <p class="p-3">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-            </div>
-            <div class="col-8 offset-2 col-md-4 offset-md-1 about-heading mb-3 margBottom hideme" id="divHistory">
-                <h3 class="m-2">Historia</h3>
-                <hr />
-                <p class="p-3">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-            </div>
-            <div class="col-0 offset-0 col-md-2 hideme" id="divLineThree">
-                <div class="row m-0 p-0 h-100">
-                    <div class="col-md-6 h-100 borderRight"></div>
-                    <div class="col-md-6 h-100"></div>
-                </div>
-            </div>
-            <div class="col-8 offset-2 col-md-4 offset-md-0 about-heading mt-5 marginTop hideme" id="divGoal">
-                <h3 class="m-2">Cel</h3>
-                <hr />
-                <p class="p-3">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-            </div>
-
-            <div class="col-8 offset-2 col-md-4 offset-md-1 about-heading mb-3 margBottom hideme" id="divMission">
-                <h3 class="m-2">Misja</h3>
-                <hr />
-                <p class="p-3">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-            </div>
-            <div class="col-0 offset-0 col-md-2 mt-0 hideme" id="divLineFour">
-                <div class="row m-0 p-0 h-100">
-                    <div class="col-md-6 h-100 borderRight"></div>
-                    <div class="col-md-6 h-100"></div>
-                </div>
-            </div>
-            <div class="col-8 offset-2 col-md-4 offset-md-0 about-heading mt-5 margBottom hideme" id="divIdeas">
-                <h3 class="m-2">Pomysły</h3>
-                <hr />
-                <p class="p-3">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-            </div>
-        </div>
-        <div class="row no-gutters">
-            <div class="col-6 text-center pl-5 pr-5">
-                <h2>Wypożyczalnia</h2>
-                <p class="text-justify">
-                                           Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
-            </div>
-            <div class="col-6">
-                <div class="skw">
-                     <img src="img/img102.jpg" class="img-fluid" style="width: 60%; height: auto;" />
-                </div>
-                
-            </div>
-        </div>
-        <div class="row no-gutters">
-            <div class="col-12 mt-5 mb-5">
-               
-            </div>
-        </div>--%>
     </div>
-    <script src="js/jquery-3.2.1.js" type="text/javascript"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <script src="Scripts/jquery-3.2.1.js" type="text/javascript"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
     <script src="https://cdn.rawgit.com/michalsnik/aos/2.0.4/dist/aos.js"></script>
     <script>
         AOS.init({

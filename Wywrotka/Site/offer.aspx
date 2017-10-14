@@ -1,12 +1,12 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SiteMaster.Master" AutoEventWireup="true" CodeBehind="offer.aspx.cs" Inherits="Wywrotka.offer" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site/SiteMaster.Master" AutoEventWireup="true" CodeBehind="offer.aspx.cs" Inherits="Wywrotka.offer" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <%--css--%>
-    <link href="css/zero.css" rel="stylesheet" />
-    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link href="css/navigation.css" rel="stylesheet" type="text/css" />
-    <link href="css/frino/frinostyle.css" rel="stylesheet" />
-    <link href="css/main.css" rel="stylesheet" type="text/css" />
+    <link href="../Styles/css/zero.css" rel="stylesheet" />
+    <link href="../Styles/css/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../Styles/css/navigation.css" rel="stylesheet" type="text/css" />
+    <link href="../Styles/css/frino/frinostyle.css" rel="stylesheet" />
+    <link href="../Styles/css/main.css" rel="stylesheet" type="text/css" />
 
       <%-- fonts --%>
         <link href="https://fonts.googleapis.com/css?family=Ribeye+Marrow&amp;subset=latin-ext" rel="stylesheet">
@@ -26,7 +26,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <a class="navbar-brand p-0 m-0" href="index.aspx">
-            <img class="img-fluid" src="img/wywrotka_logo.png" style="max-height: 2em;" />
+            <img class="img-fluid" src="../Images/wywrotka_logo.png" style="max-height: 2em;" />
         </a>
         <div class="container align-content-center m-0 p-0">
 
@@ -190,7 +190,7 @@
             <div class="col-10 offset-1">
                 <div class="row">
                     <div class="col-3">
-                        <img class="img-fluid" src="img/birthday_party.png" />
+                        <img class="img-fluid" src="../Images/birthday_party.png" />
                     </div>
                     <div class="col-9">
                         <h2>Urodziny
@@ -210,7 +210,7 @@
             <div class="col-10 offset-1">
                 <div class="row">
                     <div class="col-3">
-                        <img class="img-fluid" src="img/bride_rollers.jpg" />
+                        <img class="img-fluid" src="../Images/bride_rollers.jpg" />
                     </div>
                     <div class="col-9">
                         <h2>Wieczór panieński
@@ -230,7 +230,7 @@
             <div class="col-10 offset-1">
                 <div class="row">
                     <div class="col-3">
-                        <img class="img-fluid" src="img/oartyyyyy.jpg" />
+                        <img class="img-fluid" src="../Images/oartyyyyy.jpg" />
                     </div>
                     <div class="col-9">
                         <h2>Imprezy prywatne
@@ -250,7 +250,7 @@
             <div class="col-10 offset-1">
                 <div class="row">
                     <div class="col-3">
-                        <img class="img-fluid" src="img/offer_learn.jpg" />
+                        <img class="img-fluid" src="../Images/offer_learn.jpg" />
                     </div>
                     <div class="col-9">
                         <h2>Warsztaty nauki jazdy

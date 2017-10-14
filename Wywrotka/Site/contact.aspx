@@ -1,12 +1,12 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SiteMaster.Master" AutoEventWireup="true" CodeBehind="contact.aspx.cs" Inherits="Wywrotka.contact" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site/SiteMaster.Master" AutoEventWireup="true" CodeBehind="contact.aspx.cs" Inherits="Wywrotka.contact" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <%--css--%>
-    <link href="css/zero.css" rel="stylesheet" />
-    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link href="css/navigation.css" rel="stylesheet" type="text/css" />
-    <link href="css/frino/frinostyle.css" rel="stylesheet" />
-    <link href="css/main.css" rel="stylesheet" type="text/css" />
+    <link href="../Styles/css/zero.css" rel="stylesheet" />
+    <link href="../Styles/css/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../Styles/css/navigation.css" rel="stylesheet" type="text/css" />
+    <link href="../Styles/css/frino/frinostyle.css" rel="stylesheet" />
+    <link href="../Styles/css/main.css" rel="stylesheet" type="text/css" />
 
     <%-- fonts --%>
     <link href="https://fonts.googleapis.com/css?family=Ribeye+Marrow&amp;subset=latin-ext" rel="stylesheet">
@@ -103,7 +103,7 @@
             <h3 class="text-center w-100">FAQ</h3>
             <div class="form-horizontal col-6 offset-3">
                 <div class="form-group text-center">
-                    <a href="documents/FAQ.pdf" style="color: rgb(238,92,160); font-weight: 500; font-size: 1.3rem;">Może odpowiedź znajdziesz tutaj?</a>
+                    <a href="../Files/FAQ.pdf" style="color: rgb(238,92,160); font-weight: 500; font-size: 1.3rem;">Może odpowiedź znajdziesz tutaj?</a>
                 </div>
             </div>
         </div>

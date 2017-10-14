@@ -6,16 +6,16 @@
 <head runat="server">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <link href="css/fa/css/font-awesome.css" rel="stylesheet" />
-    <link rel="icon" type="image/png" sizes="70x70" href="img/favicon.png">
+    <link href="../Styles/css/fa/css/font-awesome.css" rel="stylesheet" />
+    <link rel="icon" type="image/png" sizes="70x70" href="Images/favicon.png">
     <title>Wywrotka</title>
     <asp:ContentPlaceHolder ID="head" runat="server">
         <%--css--%>
-        <link href="css/zero.css" rel="stylesheet" />
-        <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css" />
-        <link href="css/navigation.css" rel="stylesheet" type="text/css" />
-        <link href="css/frino/frinostyle.css" rel="stylesheet" />
-        <link href="css/main.css" rel="stylesheet" type="text/css" />
+        <link href="../Styles/css/zero.css" rel="stylesheet" />
+        <link href="../Styles/css/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="../Styles/css/navigation.css" rel="stylesheet" type="text/css" />
+        <link href="../Styles/css/frino/frinostyle.css" rel="stylesheet" />
+        <link href="../Styles/css/main.css" rel="stylesheet" type="text/css" />
 
         <%-- fonts --%>
         <link href="https://fonts.googleapis.com/css?family=Ribeye+Marrow&amp;subset=latin-ext" rel="stylesheet">

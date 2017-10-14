@@ -1,12 +1,12 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SiteMaster.Master" AutoEventWireup="true" CodeBehind="rules.aspx.cs" Inherits="Wywrotka.rules" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site/SiteMaster.Master" AutoEventWireup="true" CodeBehind="rules.aspx.cs" Inherits="Wywrotka.rules" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <%--css--%>
-    <link href="css/zero.css" rel="stylesheet" />
-    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link href="css/navigation.css" rel="stylesheet" type="text/css" />
-    <link href="css/frino/frinostyle.css" rel="stylesheet" />
-    <link href="css/main.css" rel="stylesheet" type="text/css" />
+    <link href="../Styles/css/zero.css" rel="stylesheet" />
+    <link href="../Styles/css/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="../Styles/css/navigation.css" rel="stylesheet" type="text/css" />
+    <link href="../Styles/css/frino/frinostyle.css" rel="stylesheet" />
+    <link href="../Styles/css/main.css" rel="stylesheet" type="text/css" />
 
       <%-- fonts --%>
         <link href="https://fonts.googleapis.com/css?family=Ribeye+Marrow&amp;subset=latin-ext" rel="stylesheet">

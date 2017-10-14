@@ -3,12 +3,6 @@ body, html {
     height: 100%;
     font-family: 'Zilla Slab', serif;
 }
-/*body {
-    overflow-x: hidden;
-}*/
-/** {
-    border: 1px solid red !important;
-}*/
 
 .no-border {
     border: 0;
@@ -136,7 +130,7 @@ body, html {
 
 /*parallax*/
 .parallax {
-    background-image: url('img_parallax.jpg');
+    background-image: url('../../css/img_parallax.jpg');
     height: 100%;
     background-attachment: fixed;
     background-position: center;
@@ -207,7 +201,7 @@ a, a:hover, a:active {
 
 #about_logo_black {
     text-align: center;
-    background-image: url('../img/logo_black.png');
+    background-image: url('../../Images/logo_black.png');
     background-size: contain;
     background-repeat: no-repeat;
     width: auto;
@@ -215,7 +209,7 @@ a, a:hover, a:active {
 }
 
     #about_logo_black:hover {
-        background-image: url('../img/wywrotka_logo.png');
+        background-image: url('../../img/wywrotka_logo.png');
     }
 @media (min-width: 1000px) {
 
@@ -333,14 +327,14 @@ a, a:hover, a:active {
 .elipsa {
     width: 400px;
     height: 200px;
-    margin-bottom: 0px;
-    margin-top: 0px;
+    margin-bottom: 0;
+    margin-top: 0;
     border-radius: 200px / 100px;
     -moz-border-radius: 100px / 50px;
-    transform: rotate(-10deg);
     -webkit-transform: rotate(-10deg);
     -moz-transform: rotate(-10deg);
     -o-transform: rotate(-10deg);
+    transform: rotate(-10deg);
 }
 
 .flip {

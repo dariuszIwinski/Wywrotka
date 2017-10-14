@@ -1,13 +1,13 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/SiteMaster.Master" AutoEventWireup="true" CodeBehind="events.aspx.cs" Inherits="Wywrotka.events" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site/SiteMaster.Master" AutoEventWireup="true" CodeBehind="events.aspx.cs" Inherits="Wywrotka.events" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <%--css--%>
-    <link href="css/zero.css" rel="stylesheet" />
-    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link href="css/navigation.css" rel="stylesheet" type="text/css" />
-    <link href="css/frino/frinostyle.css" rel="stylesheet" />
-    <link href="css/main.css" rel="stylesheet" type="text/css" />
-    <link href="css/googleCalendar.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/css/zero.css" rel="stylesheet" />
+    <link href="Styles/css/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/css/navigation.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/css/frino/frinostyle.css" rel="stylesheet" />
+    <link href="Styles/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/css/googleCalendar.css" rel="stylesheet" type="text/css" />
     <%-- fonts --%>
     <link href="https://fonts.googleapis.com/css?family=Ribeye+Marrow&amp;subset=latin-ext" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Zilla+Slab" rel="stylesheet">

@@ -1,0 +1,8 @@
+version: '2.1'
+
+services:
+  wywrotka:
+    image: wywrotka
+    build:
+      context: .\Wywrotka
+      dockerfile: Dockerfile

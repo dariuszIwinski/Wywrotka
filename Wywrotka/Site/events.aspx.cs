@@ -12,7 +12,7 @@ namespace Wywrotka
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            DataTable dtEVents = BL_Events.GetEvents();
+            DataTable dtEVents = DAL.GetEventsFromDB();
 
             foreach (DataRow row in dtEVents.Rows)
             {

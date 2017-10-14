@@ -68,101 +68,103 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Admin\AdminLogin.aspx" />
-    <Content Include="Admin\EventsManger.aspx" />
-    <Content Include="Admin\Pictures.aspx" />
-    <Content Include="contact.aspx" />
-    <Content Include="css\fa\css\font-awesome.css" />
-    <Content Include="css\fa\css\font-awesome.min.css" />
-    <Content Include="css\fa\fonts\fontawesome-webfont.svg" />
-    <Content Include="css\fa\HELP-US-OUT.txt" />
-    <Content Include="css\frino\frinostyle.css" />
-    <Content Include="css\frino\frinostyle.min.css" />
-    <Content Include="css\gallery.css" />
-    <Content Include="css\googleCalendar.css" />
-    <Content Include="css\zero.css" />
-    <Content Include="events.aspx" />
-    <Content Include="gallery.aspx" />
-    <Content Include="GoogleCalendarStyled.html" />
-    <Content Include="img\bg1920.jpg" />
-    <Content Include="img\birthday_party.png" />
-    <Content Include="img\bride_rollers.jpg" />
-    <Content Include="img\dottedLine.png" />
-    <Content Include="img\dottedLine_first.png" />
-    <Content Include="img\dottedLine_reverse.png" />
-    <Content Include="img\elipseWywrotka.png" />
-    <Content Include="img\favicon.png" />
-    <Content Include="img\heading_background.png" />
-    <Content Include="img\img100.jpg" />
-    <Content Include="img\img101.png" />
-    <Content Include="img\img102.jpg" />
-    <Content Include="img\img103.png" />
-    <Content Include="img\img104.jpg" />
-    <Content Include="img\logo_black.png" />
-    <Content Include="img\oartyyyyy.jpg" />
-    <Content Include="img\offer_learn.jpg" />
-    <Content Include="img\old_rollers.jpg" />
-    <Content Include="img\rollers.jpg" />
-    <Content Include="img\tlo.png" />
-    <Content Include="img\wywrotka_logo.png" />
-    <Content Include="css\navigation.css" />
-    <Content Include="index.aspx" />
-    <Content Include="js\jqueryAppear.js" />
-    <Content Include="js\tether.js" />
-    <Content Include="js\utils.js" />
-    <Content Include="offer.aspx" />
+    <Content Include="Site\Admin\AdminLogin.aspx" />
+    <Content Include="Site\Admin\EventsManger.aspx" />
+    <Content Include="Site\Admin\Pictures.aspx" />
+    <Content Include="Site\contact.aspx" />
+    <Content Include="Styles\css\fa\css\font-awesome.css" />
+    <Content Include="Styles\css\fa\css\font-awesome.min.css" />
+    <Content Include="Styles\css\fa\fonts\fontawesome-webfont.svg" />
+    <Content Include="Styles\css\fa\HELP-US-OUT.txt" />
+    <Content Include="Styles\css\frino\frinostyle.css" />
+    <Content Include="Styles\css\frino\frinostyle.min.css" />
+    <Content Include="Styles\css\googleCalendar.css" />
+    <Content Include="Styles\css\zero.css" />
+    <Content Include="Site\events.aspx" />
+    <Content Include="Site\gallery.aspx" />
+    <Content Include="Site\GoogleCalendarStyled.html" />
+    <Content Include="Images\bg1920.jpg" />
+    <Content Include="Images\birthday_party.png" />
+    <Content Include="Images\bride_rollers.jpg" />
+    <Content Include="Images\dottedLine.png" />
+    <Content Include="Images\dottedLine_first.png" />
+    <Content Include="Images\dottedLine_reverse.png" />
+    <Content Include="Images\elipseWywrotka.png" />
+    <Content Include="Images\favicon.png" />
+    <Content Include="Images\heading_background.png" />
+    <Content Include="Images\img100.jpg" />
+    <Content Include="Images\img101.png" />
+    <Content Include="Images\img102.jpg" />
+    <Content Include="Images\img103.png" />
+    <Content Include="Images\img104.jpg" />
+    <Content Include="Images\logo_black.png" />
+    <Content Include="Images\oartyyyyy.jpg" />
+    <Content Include="Images\offer_learn.jpg" />
+    <Content Include="Images\old_rollers.jpg" />
+    <Content Include="Images\rollers.jpg" />
+    <Content Include="Images\tlo.png" />
+    <Content Include="Images\wywrotka_logo.png" />
+    <Content Include="Styles\css\navigation.css" />
+    <Content Include="Site\index.aspx" />
+    <Content Include="Scripts\jqueryAppear.js" />
+    <Content Include="Scripts\tether.js" />
+    <Content Include="Scripts\utils.js" />
+    <Content Include="Site\offer.aspx" />
     <Content Include="packages.config" />
-    <Content Include="css\bootstrap\bootstrap-grid.css.map" />
-    <Content Include="css\bootstrap\bootstrap-grid.min.css.map" />
-    <Content Include="css\bootstrap\bootstrap-reboot.css.map" />
-    <Content Include="css\bootstrap\bootstrap-reboot.min.css.map" />
-    <Content Include="css\bootstrap\bootstrap.css.map" />
-    <Content Include="css\bootstrap\bootstrap.min.css.map" />
-    <Content Include="js\jquery-3.2.1.min.map" />
-    <Content Include="rules.aspx" />
-    <Content Include="Scripts\less-1.5.1.js" />
-    <Content Include="Scripts\less-1.5.1.min.js" />
-    <Content Include="SiteMaster.Master" />
-    <Content Include="fonts\frino.ttf" />
-    <Content Include="fonts\frino.woff" />
-    <Content Include="fonts\frino.woff2" />
-    <Content Include="fonts\Avene.otf" />
-    <Content Include="fonts\Avene.woff" />
-    <Content Include="fonts\Avene.woff2" />
-    <Content Include="css\fa\fonts\fontawesome-webfont.eot" />
-    <Content Include="css\fa\fonts\fontawesome-webfont.ttf" />
-    <Content Include="css\fa\fonts\fontawesome-webfont.woff" />
-    <Content Include="css\fa\fonts\fontawesome-webfont.woff2" />
-    <Content Include="css\fa\fonts\FontAwesome.otf" />
-    <Content Include="css\fa\less\animated.less" />
-    <Content Include="css\fa\less\bordered-pulled.less" />
-    <Content Include="css\fa\less\core.less" />
-    <Content Include="css\fa\less\fixed-width.less" />
-    <Content Include="css\fa\less\font-awesome.less" />
-    <Content Include="css\fa\less\icons.less" />
-    <Content Include="css\fa\less\larger.less" />
-    <Content Include="css\fa\less\list.less" />
-    <Content Include="css\fa\less\mixins.less" />
-    <Content Include="css\fa\less\path.less" />
-    <Content Include="css\fa\less\rotated-flipped.less" />
-    <Content Include="css\fa\less\screen-reader.less" />
-    <Content Include="css\fa\less\stacked.less" />
-    <Content Include="css\fa\less\variables.less" />
-    <Content Include="css\fa\scss\font-awesome.scss" />
-    <Content Include="css\fa\scss\_animated.scss" />
-    <Content Include="css\fa\scss\_bordered-pulled.scss" />
-    <Content Include="css\fa\scss\_core.scss" />
-    <Content Include="css\fa\scss\_fixed-width.scss" />
-    <Content Include="css\fa\scss\_icons.scss" />
-    <Content Include="css\fa\scss\_larger.scss" />
-    <Content Include="css\fa\scss\_list.scss" />
-    <Content Include="css\fa\scss\_mixins.scss" />
-    <Content Include="css\fa\scss\_path.scss" />
-    <Content Include="css\fa\scss\_rotated-flipped.scss" />
-    <Content Include="css\fa\scss\_screen-reader.scss" />
-    <Content Include="css\fa\scss\_stacked.scss" />
-    <Content Include="css\fa\scss\_variables.scss" />
-    <Content Include="documents\FAQ.pdf" />
+    <Content Include="Styles\css\bootstrap\bootstrap-grid.css.map" />
+    <Content Include="Styles\css\bootstrap\bootstrap-grid.min.css.map" />
+    <Content Include="Styles\css\bootstrap\bootstrap-reboot.css.map" />
+    <Content Include="Styles\css\bootstrap\bootstrap-reboot.min.css.map" />
+    <Content Include="Styles\css\bootstrap\bootstrap.css.map" />
+    <Content Include="Styles\css\bootstrap\bootstrap.min.css.map" />
+    <Content Include="Scripts\jquery-3.2.1.min.map" />
+    <Content Include="Site\rules.aspx" />
+    <Content Include="Site\SiteMaster.Master" />
+    <Content Include="Styles\fonts\frino.ttf" />
+    <Content Include="Styles\fonts\frino.woff" />
+    <Content Include="Styles\fonts\frino.woff2" />
+    <Content Include="Styles\fonts\Avene.otf" />
+    <Content Include="Styles\fonts\Avene.woff" />
+    <Content Include="Styles\fonts\Avene.woff2" />
+    <Content Include="Styles\css\fa\fonts\fontawesome-webfont.eot" />
+    <Content Include="Styles\css\fa\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Styles\css\fa\fonts\fontawesome-webfont.woff" />
+    <Content Include="Styles\css\fa\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Styles\css\fa\fonts\FontAwesome.otf" />
+    <Content Include="Styles\css\fa\less\animated.less" />
+    <Content Include="Styles\css\fa\less\bordered-pulled.less" />
+    <Content Include="Styles\css\fa\less\core.less" />
+    <Content Include="Styles\css\fa\less\fixed-width.less" />
+    <Content Include="Styles\css\fa\less\font-awesome.less" />
+    <Content Include="Styles\css\fa\less\icons.less" />
+    <Content Include="Styles\css\fa\less\larger.less" />
+    <Content Include="Styles\css\fa\less\list.less" />
+    <Content Include="Styles\css\fa\less\mixins.less" />
+    <Content Include="Styles\css\fa\less\path.less" />
+    <Content Include="Styles\css\fa\less\rotated-flipped.less" />
+    <Content Include="Styles\css\fa\less\screen-reader.less" />
+    <Content Include="Styles\css\fa\less\stacked.less" />
+    <Content Include="Styles\css\fa\less\variables.less" />
+    <Content Include="Styles\css\fa\scss\font-awesome.scss" />
+    <Content Include="Styles\css\fa\scss\_animated.scss" />
+    <Content Include="Styles\css\fa\scss\_bordered-pulled.scss" />
+    <Content Include="Styles\css\fa\scss\_core.scss" />
+    <Content Include="Styles\css\fa\scss\_fixed-width.scss" />
+    <Content Include="Styles\css\fa\scss\_icons.scss" />
+    <Content Include="Styles\css\fa\scss\_larger.scss" />
+    <Content Include="Styles\css\fa\scss\_list.scss" />
+    <Content Include="Styles\css\fa\scss\_mixins.scss" />
+    <Content Include="Styles\css\fa\scss\_path.scss" />
+    <Content Include="Styles\css\fa\scss\_rotated-flipped.scss" />
+    <Content Include="Styles\css\fa\scss\_screen-reader.scss" />
+    <Content Include="Styles\css\fa\scss\_stacked.scss" />
+    <Content Include="Styles\css\fa\scss\_variables.scss" />
+    <Content Include="Files\FAQ.pdf" />
+    <Content Include="Site\ImageByteToFormatHandler.ashx" />
+    <None Include="Dockerfile" />
+    <None Include=".dockerignore">
+      <DependentUpon>Dockerfile</DependentUpon>
+    </None>
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -172,95 +174,100 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="css\bootstrap\bootstrap-grid.css" />
-    <Content Include="css\bootstrap\bootstrap-grid.min.css" />
-    <Content Include="css\bootstrap\bootstrap-reboot.css" />
-    <Content Include="css\bootstrap\bootstrap-reboot.min.css" />
-    <Content Include="css\bootstrap\bootstrap.css" />
-    <Content Include="css\bootstrap\bootstrap.min.css" />
-    <Content Include="img\daisy.jpg" />
-    <Content Include="js\bootstrap.js" />
-    <Content Include="js\bootstrap.min.js" />
-    <Content Include="css\main.css" />
-    <Content Include="img\texture_background.jpg" />
-    <Content Include="js\jquery-3.2.1.js" />
+    <Content Include="Styles\css\bootstrap\bootstrap-grid.css" />
+    <Content Include="Styles\css\bootstrap\bootstrap-grid.min.css" />
+    <Content Include="Styles\css\bootstrap\bootstrap-reboot.css" />
+    <Content Include="Styles\css\bootstrap\bootstrap-reboot.min.css" />
+    <Content Include="Styles\css\bootstrap\bootstrap.css" />
+    <Content Include="Styles\css\bootstrap\bootstrap.min.css" />
+    <Content Include="Images\daisy.jpg" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Styles\css\main.css" />
+    <Content Include="Images\texture_background.jpg" />
+    <Content Include="Scripts\jquery-3.2.1.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Admin\AdminLogin.aspx.cs">
+    <Compile Include="BL\Event.cs" />
+    <Compile Include="Site\Admin\AdminLogin.aspx.cs">
       <DependentUpon>AdminLogin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\AdminLogin.aspx.designer.cs">
+    <Compile Include="Site\Admin\AdminLogin.aspx.designer.cs">
       <DependentUpon>AdminLogin.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\EventsManger.aspx.cs">
+    <Compile Include="Site\Admin\EventsManger.aspx.cs">
       <DependentUpon>EventsManger.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\EventsManger.aspx.designer.cs">
+    <Compile Include="Site\Admin\EventsManger.aspx.designer.cs">
       <DependentUpon>EventsManger.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Admin\Pictures.aspx.cs">
+    <Compile Include="Site\Admin\Pictures.aspx.cs">
       <DependentUpon>Pictures.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Admin\Pictures.aspx.designer.cs">
+    <Compile Include="Site\Admin\Pictures.aspx.designer.cs">
       <DependentUpon>Pictures.aspx</DependentUpon>
     </Compile>
-    <Compile Include="contact.aspx.cs">
+    <Compile Include="Site\contact.aspx.cs">
       <DependentUpon>contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="contact.aspx.designer.cs">
+    <Compile Include="Site\contact.aspx.designer.cs">
       <DependentUpon>contact.aspx</DependentUpon>
     </Compile>
-    <Compile Include="events.aspx.cs">
+    <Compile Include="DAL\DAL.cs" />
+    <Compile Include="Site\events.aspx.cs">
       <DependentUpon>events.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="events.aspx.designer.cs">
+    <Compile Include="Site\events.aspx.designer.cs">
       <DependentUpon>events.aspx</DependentUpon>
     </Compile>
-    <Compile Include="BL_Events.cs" />
-    <Compile Include="gallery.aspx.cs">
+    <Compile Include="Site\gallery.aspx.cs">
       <DependentUpon>gallery.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="gallery.aspx.designer.cs">
+    <Compile Include="Site\gallery.aspx.designer.cs">
       <DependentUpon>gallery.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Images.cs" />
-    <Compile Include="index.aspx.cs">
+    <Compile Include="Site\ImageByteToFormatHandler.ashx.cs">
+      <DependentUpon>ImageByteToFormatHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Site\index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="index.aspx.designer.cs">
+    <Compile Include="Site\index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
-    <Compile Include="offer.aspx.cs">
+    <Compile Include="Site\offer.aspx.cs">
       <DependentUpon>offer.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="offer.aspx.designer.cs">
+    <Compile Include="Site\offer.aspx.designer.cs">
       <DependentUpon>offer.aspx</DependentUpon>
     </Compile>
+    <Compile Include="BL\Picture.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="rules.aspx.cs">
+    <Compile Include="Site\rules.aspx.cs">
       <DependentUpon>rules.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="rules.aspx.designer.cs">
+    <Compile Include="Site\rules.aspx.designer.cs">
       <DependentUpon>rules.aspx</DependentUpon>
     </Compile>
-    <Compile Include="SiteMaster.Master.cs">
+    <Compile Include="Site\SiteMaster.Master.cs">
       <DependentUpon>SiteMaster.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="SiteMaster.Master.designer.cs">
+    <Compile Include="Site\SiteMaster.Master.designer.cs">
       <DependentUpon>SiteMaster.Master</DependentUpon>
     </Compile>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
