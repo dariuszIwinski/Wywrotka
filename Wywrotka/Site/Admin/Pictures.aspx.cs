@@ -78,7 +78,7 @@ namespace Wywrotka.Admin
             }
         }
 
-       
+
 
         protected void btnAddImg_Click(object sender, EventArgs e)
         {
@@ -178,7 +178,7 @@ namespace Wywrotka.Admin
             int galleryId = Convert.ToInt32(ddlDelPic_SelectGallery.SelectedValue);
 
             DataTable picturesInGallery = DAL.GetPicturesFromGallery(galleryId);
-         
+
             ddlDelPic_SelectPicture.DataSource = picturesInGallery;
             ddlDelPic_SelectPicture.DataTextField = "Description";
             ddlDelPic_SelectPicture.DataValueField = "ID";
@@ -213,11 +213,16 @@ namespace Wywrotka.Admin
         {
             bool addResult = false;
 
-            string galleryName = txtAddGall.Text;
+            string eventTitle = txtAddEvent_EventName.Text;
+            string eventDescription = txtAddEvent_EventDescription.Text;
+            DateTime eventStartTime = calAddEvent_StartTime.SelectedDate;
+            DateTime eventEndTime = calAddEvent_EndTime.SelectedDate;
+
+
 
             if (!String.IsNullOrWhiteSpace(galleryName))
             {
-                
+
                 addResult = DAL.InsertNewGalleryToDB(galleryName);
             }
 
@@ -252,6 +257,100 @@ namespace Wywrotka.Admin
             else
             {
                 calAddEvent_StartTime.Visible = false;
+            }
+        }
+
+        protected void btnDelEvent_Click(object sender, EventArgs e)
+        {
+            bool deleteResult = false;
+
+            string selectedValue = ddlDelEvent_SelectEvent.SelectedValue;
+
+            if (!String.IsNullOrWhiteSpace(selectedValue) && selectedValue != "0")
+            {
+                int eventIdToDelete = Convert.ToInt32(selectedValue);
+                deleteResult = DAL.DeleteGalleryFromDB(eventIdToDelete);
+            }
+
+            if (deleteResult == true)
+            {
+                ShowHideNotification("Usunięto wydarzenie z bazy danych", null);
+            }
+            else
+            {
+                ShowHideNotification(null, "Nie udało się usunąć wydarzenia z bazy danych");
+            }
+        }
+
+        protected void btnAddEvent_Click(object sender, EventArgs e)
+        {
+            bool addResult = false;
+
+            string eventTitle = txtAddEvent_EventName.Text;
+            string eventDescription = txtAddEvent_EventDescription.Text;
+            DateTime eventStartTime = calAddEvent_StartTime.SelectedDate;
+            DateTime eventEndTime = calAddEvent_EndTime.SelectedDate;
+            HttpPostedFile eventImage = fuAddEvent_Image.PostedFile;
+
+            Event eventToAdd = new Event();
+
+            if (String.IsNullOrWhiteSpace(eventTitle))
+            {
+                ShowHideNotification(null, "Podaj tytuł wydarzenia.");
+            }
+            else
+            {
+                eventToAdd.Title = eventTitle;
+
+                if (!String.IsNullOrWhiteSpace(eventDescription))
+                {
+                    eventToAdd.Description = eventDescription;
+                }
+                else
+                {
+                    eventToAdd.Description = "";
+
+                }
+
+                if (eventStartTime != null && eventStartTime > System.DateTime.Now)
+                {
+                    eventToAdd.StartTime = eventStartTime;
+                }
+                else
+                {
+                    eventToAdd.StartTime = null;
+
+                }
+
+                if ((eventEndTime != null) && (eventEndTime > System.DateTime.Now) && (eventStartTime < eventEndTime))
+                {
+                    eventToAdd.EndTime = eventEndTime;
+                }
+                else
+                {
+                    eventToAdd.StartTime = null;
+                }
+
+                if (eventImage != null)
+                {
+                    eventToAdd.Image = eventImage;
+                }
+                else
+                {
+                    eventToAdd.Image = null;
+                }
+
+                bool result = DAL.InsertEventToDB(eventToAdd);
+
+                if (result == true)
+                {
+                    ShowHideNotification("Dodano wydarzenie do bazy danych.", null);
+                }
+                else
+                {
+                    ShowHideNotification(null, "Nie udało się dodać wydarzenia do bazy danych");
+                }
+
             }
         }
     }

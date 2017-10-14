@@ -17,24 +17,36 @@ namespace Wywrotka
             foreach (DataRow row in dtEVents.Rows)
             {
                 string ID = row["ID"].ToString();
-                string date = ((DateTime)row["EventDate"]).ToString("dd-MM-yy <br> HH:mm");
-                string title = row["EventTitle"].ToString();
-                string descrShort = row["EventShortDescription"].ToString();
-                string descrLong = row["EventLongDescription"].ToString();
-                string image = row["EventImage"].ToString();
+                string startTime = ((DateTime)row["StartTime"]).ToString("dd-MM-yy <br> HH:mm");
+                string endTime = ((DateTime)row["EndTime"]).ToString("dd-MM-yy <br> HH:mm");
 
+                string title = row["Title"].ToString();
+                string description = row["Description"].ToString();
 
-                string eventHtmlStart = "<div class=\"row no-gutters mt-5\"><div class=\"col-3 p-0 pr-2\"><div class=\"row no-gutters\"><div class=\"col-12\">" +
-                    "<img class=\"img-fluid\" src=\""  +"img/rollers.jpg" + "\"/></div></div><div class=\"row no-gutters\"><div class=\"col-12 text-center\">"+
-                    "<h3>" + date + "</h3></div></div></div><div class=\"col-9\">" +
-                   "<h2>" + title + "</h2><p class=\"text-justify\">" +
-                   descrShort + "</p><p class=\"text-justify\">" +
-                   descrLong + "<p><a href = \"\"> więcej...</a></p></div></div>";
+                LiteralControl litEventHtml = new LiteralControl();
+                litEventHtml.Text = "<div class=\"row no-gutters mt-5\">" +
+                                            "<div class=\"col-3 p-0 pr-2\">" +
+                                                "<div class=\"row no-gutters\">" +
+                                                    "<div class=\"col-12\">" +
+                                                        "<img class=\"img-fluid\" src=\""  +"img/rollers.jpg" + "\"/>" + //zmienic na generic handler
+                                                    "</div>" +
+                                                "</div>" +
+                                                "<div class=\"row no-gutters\">" +
+                                                    "<div class=\"col-12 text-center\">"+
+                                                         "<h3>" + startTime + "</h3>" +
+                                                    "</div>" +
+                                                       "<div class=\"col-12 text-center\">" +
+                                                         "<h3>" + endTime + "</h3>" +
+                                                    "</div>" +
+                                                "</div>" +
+                                            "</div>" +
+                                            "<div class=\"col-9\">" +
+                                                "<h2>" + title + "</h2>" +
+                                                "<p class=\"text-justify\">" + description + "</p>" +
+                                           "</div>" +
+                                       "</div>";
 
-                LiteralControl literal = new LiteralControl();
-                literal.Text = eventHtmlStart;
-
-                PanelEvents.Controls.Add(literal);
+                PanelEvents.Controls.Add(litEventHtml);
             }
 
 

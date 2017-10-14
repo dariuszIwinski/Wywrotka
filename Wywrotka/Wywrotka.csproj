@@ -166,6 +166,7 @@
       <DependentUpon>Dockerfile</DependentUpon>
     </None>
     <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
+    <Content Include="Site\ByteToImgEventsHandler.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -236,6 +237,7 @@
     <Compile Include="Site\ImageByteToFormatHandler.ashx.cs">
       <DependentUpon>ImageByteToFormatHandler.ashx</DependentUpon>
     </Compile>
+    <Compile Include="Site\ImageByteToFormatHandler.cs" />
     <Compile Include="Site\index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

@@ -289,7 +289,7 @@
                         </div>
                         <div class="row mt-3">
                             <div class="col-2">
-                                <asp:Button ID="btnDelEvent" CssClass="btn btn-primary" runat="server" Text="Usuń" />
+                                <asp:Button ID="btnDelEvent" CssClass="btn btn-primary" runat="server" Text="Usuń" OnClick="btnDelEvent_Click" />
                             </div>
 
                         </div>
@@ -365,7 +365,7 @@
                         </div>
                         <div class="row mt-3">
                             <div class="col-2">
-                                <asp:Button ID="btnAddEvent" CssClass="btn btn-primary" runat="server" Text="Dodaj" OnClick="btnAddGall_Click" />
+                                <asp:Button ID="btnAddEvent" CssClass="btn btn-primary" runat="server" Text="Dodaj" OnClick="btnAddEvent_Click" />
                             </div>
                         </div>
 

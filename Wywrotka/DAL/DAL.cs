@@ -144,7 +144,7 @@ namespace Wywrotka
 
             foreach (string pictureId in pictureInGalleryIdList.Reverse<string>())
             {
-               bool isDeleted =  DeletePictureFromDB(Convert.ToInt32(pictureId));
+                bool isDeleted = DeletePictureFromDB(Convert.ToInt32(pictureId));
                 if (isDeleted == true)
                 {
                     pictureInGalleryIdList.Remove(pictureId);
@@ -324,5 +324,66 @@ namespace Wywrotka
 
             return events;
         }
+
+        public static bool DeleteEventFromDB(int eventId)
+        {
+            bool result = false;
+
+            string queryDeleteEventFromDB = "DELETE FROM dbo.events WHERE id = @eventId";
+
+            using (SqlConnection conn = new SqlConnection(GetConnectionString("local")))
+            {
+                SqlCommand cmd = new SqlCommand(queryDeleteEventFromDB, conn);
+                SqlParameter paramEventId = new SqlParameter();
+                paramEventId.Value = eventId;
+                paramEventId.ParameterName = "@eventId";
+                cmd.Parameters.Add(paramEventId);
+                cmd.CommandTimeout = 600;
+                conn.Open();
+                int deletedRows = cmd.ExecuteNonQuery();
+                if (deletedRows == 1)
+                {
+                    result = true;
+                }
+            }
+
+            return result;
+        }
+
+        public static bool InsertEventToDB(Event eventToInsert)
+        {
+            bool addResult = false;
+
+            if (!String.IsNullOrWhiteSpace(eventToInsert.Title))
+            {
+                Image img = Image.FromStream(eventToInsert.Image.InputStream);
+
+                ImageFormat imgFormat = GetImgFormat(eventToInsert.Image);
+
+
+                using (SqlConnection conn = new SqlConnection(GetConnectionString("local")))
+                {
+                    string query = "INSERT INTO events (Title, Description, ImgBits, StartTime, EndTime) Values (@evntTitle, @evntDescr, @evntImgBits, @evntStartTime, @evntEndTime)";
+
+                    SqlCommand cmd = new SqlCommand(query, conn);
+
+                    cmd.Parameters.AddWithValue("@evntTitle", eventToInsert.Title);
+                    cmd.Parameters.AddWithValue("@evntDescr", eventToInsert.Description);
+                    cmd.Parameters.AddWithValue("@evntImgBits", ImageToByteArray(img, imgFormat));
+                    cmd.Parameters.AddWithValue("@evntStartTime", eventToInsert.StartTime);
+                    cmd.Parameters.AddWithValue("@evntEndTime", eventToInsert.EndTime);
+
+                    conn.Open();
+
+                    int queryResult = cmd.ExecuteNonQuery();
+
+                    if (queryResult == 1)
+                        addResult = true;
+                }
+            }
+
+            return addResult;
+        }
+
     }
 }
