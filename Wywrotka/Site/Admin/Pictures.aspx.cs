@@ -15,6 +15,9 @@ namespace Wywrotka.Admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            this.ScriptManagerAdministration.RegisterPostBackControl(btnAddEvent); 
+            this.ScriptManagerAdministration.RegisterPostBackControl(btnAddImg); 
+
 
             if (!IsPostBack)
             {
@@ -41,6 +44,13 @@ namespace Wywrotka.Admin
                 ddlDelGall_SelectGallery.DataValueField = "ID";
                 ddlDelGall_SelectGallery.DataBind();
                 ddlDelGall_SelectGallery.Items.Insert(0, new ListItem("Wybierz galerię", "0"));
+
+                DataTable events = DAL.GetEventsFromDB();
+                ddlDelEvent_SelectEvent.DataSource = events;
+                ddlDelEvent_SelectEvent.DataTextField = "Title";
+                ddlDelEvent_SelectEvent.DataValueField = "ID";
+                ddlDelEvent_SelectEvent.DataBind();
+                ddlDelEvent_SelectEvent.Items.Insert(0, new ListItem("Wybierz wydarzenie", "0"));
 
                 notificationBox.Visible = false;
             }
@@ -98,8 +108,8 @@ namespace Wywrotka.Admin
 
             ImageToSave.Image = fuImgDisc.PostedFile;
 
-            if (rbDisc.Checked)
-            {
+            //if (rbDisc.Checked)
+            //{
                 if (!String.IsNullOrWhiteSpace(fuImgDisc.FileName))
                 {
                     string connString = DAL.GetConnectionString("local");
@@ -118,7 +128,7 @@ namespace Wywrotka.Admin
                 {
                     ShowHideNotification(null, "Nie wybrano pliku");
                 }
-            }
+            //}
         }
 
 
@@ -213,12 +223,7 @@ namespace Wywrotka.Admin
         {
             bool addResult = false;
 
-            string eventTitle = txtAddEvent_EventName.Text;
-            string eventDescription = txtAddEvent_EventDescription.Text;
-            DateTime eventStartTime = calAddEvent_StartTime.SelectedDate;
-            DateTime eventEndTime = calAddEvent_EndTime.SelectedDate;
-
-
+            string galleryName = txtAddGall.Text;
 
             if (!String.IsNullOrWhiteSpace(galleryName))
             {
@@ -269,7 +274,7 @@ namespace Wywrotka.Admin
             if (!String.IsNullOrWhiteSpace(selectedValue) && selectedValue != "0")
             {
                 int eventIdToDelete = Convert.ToInt32(selectedValue);
-                deleteResult = DAL.DeleteGalleryFromDB(eventIdToDelete);
+                deleteResult = DAL.DeleteEventFromDB(eventIdToDelete);
             }
 
             if (deleteResult == true)
@@ -288,8 +293,20 @@ namespace Wywrotka.Admin
 
             string eventTitle = txtAddEvent_EventName.Text;
             string eventDescription = txtAddEvent_EventDescription.Text;
-            DateTime eventStartTime = calAddEvent_StartTime.SelectedDate;
-            DateTime eventEndTime = calAddEvent_EndTime.SelectedDate;
+
+            DateTime eventStartTime;
+            if (!DateTime.TryParse(txtAddEvent_StartTime.Text, out eventStartTime))
+            {
+                eventStartTime = default(DateTime);
+            }
+
+
+            DateTime eventEndTime;
+            if (!DateTime.TryParse(txtAddEvent_EndTime.Text, out eventEndTime))
+            {
+                eventEndTime = default(DateTime);
+            }
+
             HttpPostedFile eventImage = fuAddEvent_Image.PostedFile;
 
             Event eventToAdd = new Event();
@@ -334,24 +351,36 @@ namespace Wywrotka.Admin
                 if (eventImage != null)
                 {
                     eventToAdd.Image = eventImage;
+
                 }
                 else
                 {
                     eventToAdd.Image = null;
                 }
 
-                bool result = DAL.InsertEventToDB(eventToAdd);
-
-                if (result == true)
-                {
-                    ShowHideNotification("Dodano wydarzenie do bazy danych.", null);
-                }
-                else
-                {
-                    ShowHideNotification(null, "Nie udało się dodać wydarzenia do bazy danych");
-                }
-
+                addResult = DAL.InsertEventToDB(eventToAdd);
             }
+
+            if (addResult == true)
+            {
+                ShowHideNotification("Dodano wydarzenie do bazy danych.", null);
+            }
+            else
+            {
+                ShowHideNotification(null, "Nie udało się dodać wydarzenia do bazy danych");
+            }
+        }
+
+        protected void calAddEvent_EndTime_SelectionChanged(object sender, EventArgs e)
+        {
+            txtAddEvent_EndTime.Text = calAddEvent_EndTime.SelectedDate.ToString("yyyy-MM-dd hh:mm");
+            calAddEvent_EndTime.Visible = false;
+        }
+   
+        protected void calAddEvent_StartTime_SelectionChanged(object sender, EventArgs e)
+        {
+            txtAddEvent_StartTime.Text = calAddEvent_StartTime.SelectedDate.ToString("yyyy-MM-dd hh:mm");
+            calAddEvent_StartTime.Visible = false;
         }
     }
 }

@@ -11,25 +11,8 @@ namespace Wywrotka
         public string Description { get; set; }
         public int ID { get; set; }
         public HttpPostedFile Image { get; set; }
+        public string ImgType { get; set; }
 
-        public Event()
-        {
-
-        }
-
-        public Event(int id, string title)
-        {
-            ID = id;
-            Title = title;
-        }
-
-        public Event(int id, string title, string description, DateTime startTime, DateTime endTime)
-        {
-            ID = id;
-            Title = title;
-            Description = description;
-            StartTime = startTime;
-            EndTime = endTime;
-        }
+       
     }
 }

@@ -11,6 +11,8 @@
       <%-- fonts --%>
         <link href="https://fonts.googleapis.com/css?family=Ribeye+Marrow&amp;subset=latin-ext" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Zilla+Slab" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
     <style>
         @media (min-width: 768px) 
         {
@@ -87,11 +89,11 @@
                                 </tr>
                                 <tr>
                                     <td>Ulgowy</td>
-                                    <td>10 zł/h</td>
+                                    <td>12 zł/h</td>
                                 </tr>
                                 <tr>
                                     <td>Normalny</td>
-                                    <td>15 zł/h</td>
+                                    <td>17 zł/h</td>
                                 </tr>
                                 <tr>
                                     <td>Wypożyczenie wrotek</td>
@@ -99,8 +101,8 @@
                                 </tr>
                                 <tr>
                                     <td>Wypożyczenie ochraniaczy<br />
-                                        ( kask + zestaw ochraniaczy)</td>
-                                    <td>5 zł </td>
+                                        ( kask + zestaw ochraniaczy )</td>
+                                    <td>darmowe</td>
                                 </tr>
                                 <tr>
                                     <td>Indywidualna lekcja z instruktorem</td>
@@ -111,8 +113,10 @@
 
                     </div>
                     <div class="row">
-                        <p class="text-center w-100">Dokumentem uprawniającym do karnetu ulgowego<br />
-                            jest ważna legitymacja szkolna.</p>
+                        <div class="col-12 mb-5">
+                               <p class="text-center w-100">Dokumentem uprawniającym do karnetu ulgowego<br />
+                            jest ważna legitymacja szkolna lub studencka.</p>
+                        </div>
                     </div>
                     <div class="row">
                         <div class="col-10 offset-1 text-center">
@@ -172,11 +176,11 @@
                                 </tr>
                                 <tr>
                                     <td>Sobota</td>
-                                    <td>10 - ostatni klient (24)</td>
+                                    <td>10 - 24</td>
                                 </tr>
                                 <tr>
                                     <td>Niedziela</td>
-                                    <td>10 - ostatni klient (24)</td>
+                                    <td>10 - 24</td>
                                 </tr>
                             </table>
                         </div>

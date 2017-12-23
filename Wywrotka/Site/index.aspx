@@ -22,6 +22,8 @@
     <%-- fonts --%>
     <link href="https://fonts.googleapis.com/css?family=Ribeye+Marrow&amp;subset=latin-ext" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Zilla+Slab" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MasterBody" runat="server">

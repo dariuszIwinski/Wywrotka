@@ -13,6 +13,24 @@ namespace Wywrotka.Admin {
     public partial class Pictures {
         
         /// <summary>
+        /// ScriptManagerAdministration control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.ScriptManager ScriptManagerAdministration;
+        
+        /// <summary>
+        /// upNotifications control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel upNotifications;
+        
+        /// <summary>
         /// notificationBox control.
         /// </summary>
         /// <remarks>
@@ -40,31 +58,13 @@ namespace Wywrotka.Admin {
         protected global::System.Web.UI.WebControls.Label lblDanger;
         
         /// <summary>
-        /// rbDisc control.
+        /// upAddPicture control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton rbDisc;
-        
-        /// <summary>
-        /// rbLink control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputRadioButton rbLink;
-        
-        /// <summary>
-        /// txtImgLink control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtImgLink;
+        protected global::System.Web.UI.UpdatePanel upAddPicture;
         
         /// <summary>
         /// fuImgDisc control.
@@ -112,6 +112,15 @@ namespace Wywrotka.Admin {
         protected global::System.Web.UI.WebControls.Button btnAddImg;
         
         /// <summary>
+        /// upDelPicture control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel upDelPicture;
+        
+        /// <summary>
         /// ddlDelPic_SelectGallery control.
         /// </summary>
         /// <remarks>
@@ -139,6 +148,15 @@ namespace Wywrotka.Admin {
         protected global::System.Web.UI.WebControls.Button btnDelPic;
         
         /// <summary>
+        /// upDelGallery control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel upDelGallery;
+        
+        /// <summary>
         /// ddlDelGall_SelectGallery control.
         /// </summary>
         /// <remarks>
@@ -155,6 +173,15 @@ namespace Wywrotka.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnDelGall;
+        
+        /// <summary>
+        /// upAddGallery control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel upAddGallery;
         
         /// <summary>
         /// txtAddGall control.
@@ -175,6 +202,15 @@ namespace Wywrotka.Admin {
         protected global::System.Web.UI.WebControls.Button btnAddGall;
         
         /// <summary>
+        /// upDelEvent control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel upDelEvent;
+        
+        /// <summary>
         /// ddlDelEvent_SelectEvent control.
         /// </summary>
         /// <remarks>
@@ -191,6 +227,15 @@ namespace Wywrotka.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnDelEvent;
+        
+        /// <summary>
+        /// upAddEvent control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel upAddEvent;
         
         /// <summary>
         /// txtAddEvent_EventName control.
@@ -220,6 +265,15 @@ namespace Wywrotka.Admin {
         protected global::System.Web.UI.WebControls.Button btnAddEvent_ShowCalendarStartTime;
         
         /// <summary>
+        /// txtAddEvent_StartTime control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtAddEvent_StartTime;
+        
+        /// <summary>
         /// calAddEvent_StartTime control.
         /// </summary>
         /// <remarks>
@@ -236,6 +290,15 @@ namespace Wywrotka.Admin {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnAddEvent_ShowCalendarEndTie;
+        
+        /// <summary>
+        /// txtAddEvent_EndTime control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtAddEvent_EndTime;
         
         /// <summary>
         /// calAddEvent_EndTime control.

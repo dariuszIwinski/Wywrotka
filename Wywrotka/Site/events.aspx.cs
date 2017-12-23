@@ -17,26 +17,68 @@ namespace Wywrotka
             foreach (DataRow row in dtEVents.Rows)
             {
                 string ID = row["ID"].ToString();
-                string startTime = ((DateTime)row["StartTime"]).ToString("dd-MM-yy <br> HH:mm");
-                string endTime = ((DateTime)row["EndTime"]).ToString("dd-MM-yy <br> HH:mm");
-
                 string title = row["Title"].ToString();
-                string description = row["Description"].ToString();
+
+                string startTime;
+                if (!String.IsNullOrWhiteSpace(row["StartTime"].ToString()))
+                {
+                    startTime = (row["StartTime"]).ToString();
+                    DateTime startTimeDT = new DateTime();
+                    DateTime.TryParse(startTime, out startTimeDT);
+                    startTime = startTimeDT.ToString("dd-MM-yyyy HH:mm");
+                }
+                else
+                {
+                    startTime = "";
+                }
+
+                string endTime;
+                if (!String.IsNullOrWhiteSpace(row["EndTime"].ToString()))
+                {
+                    endTime = (row["StartTime"]).ToString();
+                    DateTime endTimeDT = new DateTime();
+                    DateTime.TryParse(endTime, out endTimeDT);
+                    endTime = endTimeDT.ToString("dd-MM-yyyy  HH:mm");
+                }
+                else
+                {
+                    endTime = "";
+                }
+
+                string description;
+                if (row["Description"] != null)
+                {
+                    description = (row["Description"]).ToString();
+                }
+                else
+                {
+                    description = "";
+                }
+
+                string imgType;
+                if (row["ImgType"] != null)
+                {
+                    imgType = (row["ImgType"]).ToString();
+                }
+                else
+                {
+                    imgType = "";
+                }
 
                 LiteralControl litEventHtml = new LiteralControl();
                 litEventHtml.Text = "<div class=\"row no-gutters mt-5\">" +
                                             "<div class=\"col-3 p-0 pr-2\">" +
                                                 "<div class=\"row no-gutters\">" +
                                                     "<div class=\"col-12\">" +
-                                                        "<img class=\"img-fluid\" src=\""  +"img/rollers.jpg" + "\"/>" + //zmienic na generic handler
+                                                        "<img class=\"img-fluid\" src=\"" + "Admin/ByteToImgEventsHandler.ashx?evntId=" + ID +"&imgType="+ imgType +"\"/>" +
                                                     "</div>" +
                                                 "</div>" +
-                                                "<div class=\"row no-gutters\">" +
+                                                "<div class=\"row mt-5\">" +
                                                     "<div class=\"col-12 text-center\">"+
-                                                         "<h3>" + startTime + "</h3>" +
+                                                         "<p>" + startTime + "</p>" +
                                                     "</div>" +
                                                        "<div class=\"col-12 text-center\">" +
-                                                         "<h3>" + endTime + "</h3>" +
+                                                         "<p>" + endTime + "</p>" +
                                                     "</div>" +
                                                 "</div>" +
                                             "</div>" +

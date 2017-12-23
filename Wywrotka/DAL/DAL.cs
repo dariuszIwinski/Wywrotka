@@ -306,10 +306,11 @@ namespace Wywrotka
             events.Columns.Add("Description");
             events.Columns.Add("StartTime");
             events.Columns.Add("EndTime");
+            events.Columns.Add("ImgType");
 
             try
             {
-                string queryGetEvents = "SELECT ID, Title, Description, StartTime, EndTime FROM dbo.events WITH(NOLOCK)";
+                string queryGetEvents = "SELECT ID, Title, Description, StartTime, EndTime, ImgType FROM dbo.events WITH(NOLOCK)";
 
                 using (SqlConnection conn = new SqlConnection(GetConnectionString("local")))
                 {
@@ -356,23 +357,87 @@ namespace Wywrotka
 
             if (!String.IsNullOrWhiteSpace(eventToInsert.Title))
             {
-                Image img = Image.FromStream(eventToInsert.Image.InputStream);
+                string queryDescTitle = ", Description";
+                string queryDescVariable = ", @evntDescr";
 
-                ImageFormat imgFormat = GetImgFormat(eventToInsert.Image);
+                string queryImageTitle = ", ImgBits";
+                string queryImageVariable = ", @evntImgBits";
+
+                string queryStartTimeTitle = ", StartTime";
+                string queryStartTimeVariable = ", @evntStartTime";
+
+                string queryEndTimeTitle = ", EndTime";
+                string queryEndTimeVariable = ", @evntEndTime";
+
+                string queryImageTypeTitle = ", ImgType";
+                string queryImageTypeVariable = ", @evntImgType";
 
 
                 using (SqlConnection conn = new SqlConnection(GetConnectionString("local")))
                 {
-                    string query = "INSERT INTO events (Title, Description, ImgBits, StartTime, EndTime) Values (@evntTitle, @evntDescr, @evntImgBits, @evntStartTime, @evntEndTime)";
 
-                    SqlCommand cmd = new SqlCommand(query, conn);
+                    SqlCommand cmd = new SqlCommand();
+                    cmd.Connection = conn;
+
+                    if (String.IsNullOrWhiteSpace(eventToInsert.Description))
+                    {
+                        queryDescTitle = "";
+                        queryDescVariable = "";
+                    }
+                    else
+                    {
+                        cmd.Parameters.AddWithValue("@evntDescr", eventToInsert.Description);
+                    }
+
+                    if (eventToInsert.Image == null)
+                    {
+                        queryImageTitle = "";
+                        queryImageVariable = "";
+
+                        queryImageTypeTitle = "";
+                        queryImageTypeVariable = "";
+                    }
+                    else
+                    {
+                        Image img = Image.FromStream(eventToInsert.Image.InputStream);
+
+                        ImageFormat imgFormat = GetImgFormat(eventToInsert.Image);
+
+                        cmd.Parameters.AddWithValue("@evntImgBits", ImageToByteArray(img, imgFormat));
+                        cmd.Parameters.AddWithValue("@evntImgType", imgFormat.ToString());
+
+                    }
+
+                    if (eventToInsert.StartTime == null)
+                    {
+                        queryStartTimeTitle = "";
+                        queryStartTimeVariable = "";
+
+                    }
+                    else
+                    {
+                        cmd.Parameters.AddWithValue("@evntStartTime", eventToInsert.StartTime);
+
+                    }
+
+                    if (eventToInsert.EndTime == null)
+                    {
+                        queryEndTimeTitle = "";
+                        queryEndTimeVariable = "";
+                    }
+                    else
+                    {
+                        cmd.Parameters.AddWithValue("@evntEndTime", eventToInsert.EndTime);
+
+                    }
 
                     cmd.Parameters.AddWithValue("@evntTitle", eventToInsert.Title);
-                    cmd.Parameters.AddWithValue("@evntDescr", eventToInsert.Description);
-                    cmd.Parameters.AddWithValue("@evntImgBits", ImageToByteArray(img, imgFormat));
-                    cmd.Parameters.AddWithValue("@evntStartTime", eventToInsert.StartTime);
-                    cmd.Parameters.AddWithValue("@evntEndTime", eventToInsert.EndTime);
 
+
+                    string query = String.Format("INSERT INTO events (Title {0}{1}{2}{3}{4}) Values (@evntTitle {5}{6}{7}{8}{9})", queryDescTitle, queryImageTitle, queryStartTimeTitle, queryEndTimeTitle, queryImageTypeTitle, queryDescVariable, queryImageVariable, queryStartTimeVariable, queryEndTimeVariable, queryImageTypeVariable);
+
+
+                    cmd.CommandText = query;
                     conn.Open();
 
                     int queryResult = cmd.ExecuteNonQuery();

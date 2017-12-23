@@ -11,6 +11,8 @@
     <%-- fonts --%>
     <link href="https://fonts.googleapis.com/css?family=Ribeye+Marrow&amp;subset=latin-ext" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Zilla+Slab" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MasterBody" runat="server">
     <nav class="navbar navbar-toggleable-md navbar-inverse bg-faded no-padding no-margin no-border fixed-top pt-1 pb-1" role="navigation">
@@ -18,7 +20,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <a class="navbar-brand p-0 m-0" href="index.aspx">
-            <img class="img-fluid" src="img/wywrotka_logo.png" style="max-height: 2em;" />
+            <img class="img-fluid" src="../Images/wywrotka_logo.png" style="max-height: 2em;" />
         </a>
         <div class="container align-content-center m-0 p-0">
 

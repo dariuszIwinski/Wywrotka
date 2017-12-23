@@ -7,6 +7,8 @@
     <link href="../Styles/css/navigation.css" rel="stylesheet" type="text/css" />
     <link href="../Styles/css/frino/frinostyle.css" rel="stylesheet" />
     <link href="../Styles/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
     <style type="text/css">
         figure {
             overflow: hidden;
@@ -60,7 +62,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <a class="navbar-brand p-0 m-0" href="index.aspx">
-            <img class="img-fluid" src="img/wywrotka_logo.png" style="max-height: 2em;" />
+            <img class="img-fluid" src="../Images/wywrotka_logo.png" style="max-height: 2em;" />
         </a>
         <div class="container align-content-center m-0 p-0">
 
