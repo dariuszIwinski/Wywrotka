@@ -31,12 +31,12 @@ namespace Wywrotka {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl galleriesListRow;
         
         /// <summary>
-        /// galleries control.
+        /// gallerisContainer control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl galleries;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl gallerisContainer;
     }
 }

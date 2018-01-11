@@ -8,22 +8,21 @@
     <link href="../Styles/css/frino/frinostyle.css" rel="stylesheet" />
     <link href="../Styles/css/main.css" rel="stylesheet" type="text/css" />
 
-      <%-- fonts --%>
-        <link href="https://fonts.googleapis.com/css?family=Ribeye+Marrow&amp;subset=latin-ext" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Zilla+Slab" rel="stylesheet">
+    <%-- fonts --%>
+    <link href="https://fonts.googleapis.com/css?family=Ribeye+Marrow&amp;subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Zilla+Slab" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 
     <style>
-        @media (min-width: 768px) 
-        {
-        .mb-md-5 {
-            margin-bottom: 11rem!important;
-        }
+        @media (min-width: 768px) {
+            .mb-md-5 {
+                margin-bottom: 11rem !important;
+            }
         }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MasterBody" runat="server">
-        <nav class="navbar navbar-toggleable-md navbar-inverse bg-faded no-padding no-margin no-border fixed-top pt-1 pb-1" role="navigation">
+    <nav class="navbar navbar-toggleable-md navbar-inverse bg-faded no-padding no-margin no-border fixed-top pt-1 pb-1" role="navigation">
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -33,7 +32,7 @@
         <div class="container align-content-center m-0 p-0">
 
             <div class="navbar-collapse collapse row no-gutters" id="navbarToggler">
-                    <div class="col-8 offset-3 col-md-9 offset-md-1 p-0">
+                <div class="col-8 offset-3 col-md-9 offset-md-1 p-0">
                     <ul class="navbar-nav mr-auto mt-2 mt-md-0 main-nav">
                         <li class="nav-item pt-1 pb-1"><a class="nav-link" href="index.aspx">O NAS</a></li>
                         <li class="nav-item pt-1 pb-1 active"><a class="nav-link" href="offer.aspx">OFERTA</a></li>
@@ -46,12 +45,10 @@
                 <div class="col-8 offset-3 col-md-1 offset-md-1 p-0">
                     <ul class="navbar-nav navbar-right mt-2 md-0">
                         <li class="nav-item pt-1 pb-1">
-                            <a class="nav-social-a" href="#">
+                            <a class="nav-social-a p-2" href="https://www.facebook.com/WrotkarniaWywrotka/">
                                 <i class="fa fa-facebook-square"></i>
                             </a>
-                        </li>
-                        <li class="nav-item pt-1 pb-1">
-                            <a class="nav-social-a" href="#">
+                            <a class="nav-social-a p-2" href="https://www.instagram.com/wrotkarnia.wywrotka/">
                                 <i class="fa fa-instagram"></i>
                             </a>
                         </li>
@@ -101,8 +98,8 @@
                                 </tr>
                                 <tr>
                                     <td>Wypożyczenie ochraniaczy<br />
-                                        ( kask + zestaw ochraniaczy )</td>
-                                    <td>darmowe</td>
+                                        (kask + zestaw ochraniaczy)</td>
+                                    <td>darmowe dostępne w wypożyczalni</td>
                                 </tr>
                                 <tr>
                                     <td>Indywidualna lekcja z instruktorem</td>
@@ -114,25 +111,43 @@
                     </div>
                     <div class="row">
                         <div class="col-12 mb-5">
-                               <p class="text-center w-100">Dokumentem uprawniającym do karnetu ulgowego<br />
-                            jest ważna legitymacja szkolna lub studencka.</p>
+                            <p class="text-center w-100">
+                                Dokumentem uprawniającym do karnetu ulgowego<br />
+                                jest ważna legitymacja szkolna lub studencka.
+                            </p>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-10 offset-1 text-center">
                             <table class="table table-hover table-bordered w-100 h-100">
                                 <tr>
-                                    <th colspan="2" class="text-center font-weight-bold">Grupy zorganizowane<br />
-                                        (min. 10 osób)</th>
+                                    <th colspan="2" class="text-center font-weight-bold">Karnety</th>
                                 </tr>
                                 <tr>
-                                    <td>Bilet</td>
-                                    <td>8 zł/h</td>
-
+                                    <td>10x wejście + wrotki</td>
+                                    <td>140 zł/rok</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 mb-5">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-10 offset-1 text-center">
+                            <table class="table table-hover table-bordered w-100 h-100">
+                                <tr>
+                                    <th colspan="2" class="text-center font-weight-bold">Bilet rodzinny</th>
                                 </tr>
                                 <tr>
-                                    <td>Wypożyczenie wrotek</td>
-                                    <td>5 zł</td>
+                                    <td>Rodzic + 2 dzieci</td>
+                                    <td>50 zł/h</td>
+                                </tr>
+                                <tr>
+                                    <td>Rodzice + 2 dzieci</td>
+                                    <td>60 zł/h<br />
+                                        +15zł każde kolejne dziecko</td>
                                 </tr>
                             </table>
                         </div>
@@ -141,7 +156,7 @@
             </div>
             <%--oppenings--%>
             <div class="col-10 offset-1 col-md-5 offset-md-0" id="openings">
-                <div class="white-border p-3 ml-md-2">
+                <div class="white-border p-3 ml-md-2 h-100">
                     <div class="row pt-3 pb-3">
                         <div class="col-12  text-center">
                             <h2 class="h2 text-center">Godziny otwarcia</h2>
@@ -185,91 +200,130 @@
                             </table>
                         </div>
                     </div>
-                    <%--                     <div class="mb-5"><br /></div>
-                    <div class="mb-5 pb-2"><br /></div>--%>
                 </div>
             </div>
-        </div>
-        <div class="row no-gutters mt-5">
-            <div class="col-10 offset-1">
-                <div class="row">
-                    <div class="col-3">
-                        <img class="img-fluid" src="../Images/birthday_party.png" />
-                    </div>
-                    <div class="col-9">
-                        <h2>Urodziny
-                        </h2>
-                        <p>
-                            ŚWIATŁA, KAMERA, AKCJA. TEGO W POZNANIU JESZCZE NIE BYŁO
-                        </p>
-                        <p>
-                            Spędź swoje urodziny z nami i przeżyj niezapomniane chwile w iście kosmicznym klimacie. Jedz pyszne smakołyki w towarzystwie super-bohaterów przy akompaniamencie wspaniałej muzyki oraz blasku świateł
-                        </p>
-                        <p><a href="#">więcej...</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row no-gutters mt-3">
-            <div class="col-10 offset-1">
-                <div class="row">
-                    <div class="col-3">
-                        <img class="img-fluid" src="../Images/bride_rollers.jpg" />
-                    </div>
-                    <div class="col-9">
-                        <h2>Wieczór panieński
-                        </h2>
-                        <p>
-                            Ślub twojej koleżanki tuż tuż? Nie szkodzi!
-                        </p>
-                        <p>
-                            Pomóż jej wygodnie dojechać na wesele i zabierz ją na wrotki. Wybierzcie się w podróż w kosmicznym blasku tysięcy kolorowych świateł i zawrotnym rytmie Roller Disco
-                        </p>
-                        <p><a href="">więcej...</a></p>
+            <div class="row no-gutters mt-5">
+                <div class="col-10 offset-1">
+                    <div class="row">
+                        <div class="col-3">
+                            <img class="img-fluid" src="../Images/wywrotkaDefault.png" />
+                        </div>
+                        <div class="col-9">
+                            <h2>Urodziny
+                            </h2>
+                            <p>
+                                BEST B-DAY EVER
+                            </p>
+                            <p>
+                                Jeżeli nie chcesz standardowej imprezy urodzinowej, zrób to inaczej. Zabierz znajomych do nas, a gwarantujemy, że nie zapomnicie tego dnia.
+                            </p>
+                            <p>
+                                Duży tor wrotkarski, zgrana paczka znajomych, świetna muzyka i światła – czego chcieć więcej? Napisz do nas, ile osób zaprosisz i jak chcesz, aby impreza wyglądała, a my zadbamy o to, żeby Twoje urodziny były kosmiczne!
+                            </p>
+                            <p><a data-toggle="collapse" data-target="#bday">Czytaj więcej...</a></p>
+                            <div id="bday" class="collapse">
+                                <p>Na urodziny:</p>
+                                <div class="pl-3">
+                                    <ul style="list-style-type: disc">
+                                        <li>Ty i Twoi znajomi otrzymujecie miejsce w specjalnej loży</li>
+                                        <li>Macie słodkości i napojów do wyboru, do koloru</li>
+                                        <li>Rzecz jasna wstęp na tor z całym pakietem (wrotki, ochraniacze)</li>
+                                        <li>Możecie wnieść: tort, itp. (do ustalenia)</li>
+                                        <li>Jeżeli solenizant jest małoletni, możemy zaprosić dla niego i jego gości animatora, który wymyśli dla nich odlotowe gry i zabawy</li>
+                                    </ul>
+                                </div>
+                                <p>Jeżeli chcesz zrobić niezapomniane urodziny, zadzwoń do nas nie później niż z 3-dniowym wyprzedzeniem. W przypadku imprez dla dzieci prosimy o obecność osoby dorosłej.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="row no-gutters mt-3 pb-3">
-            <div class="col-10 offset-1">
-                <div class="row">
-                    <div class="col-3">
-                        <img class="img-fluid" src="../Images/oartyyyyy.jpg" />
-                    </div>
-                    <div class="col-9">
-                        <h2>Imprezy prywatne
-                        </h2>
-                        <p>
-                            ŚWIATŁA, KAMERA, AKCJA. TEGO W POZNANIU JESZCZE NIE BYŁO
-                        </p>
-                        <p>
-                            Szukasz czegoś tylko dla siebie, chciałbyś zaskoczyć rodzinę lub znajomych z pracy. Teraz masz okazję . Imprezy prywatne, firmowe, integracyjne i wiele innych . Nie    krępuj się i przejmij dowodzenie nad wrotkarnią
-                        </p>
-                        <p><a href="#">więcej...</a></p>
+            <div class="row no-gutters mt-3">
+                <div class="col-10 offset-1">
+                    <div class="row">
+                        <div class="col-3">
+                            <img class="img-fluid" src="../Images/wywrotkaDefault.png" />
+                        </div>
+                        <div class="col-9">
+                            <h2>Wieczór panieński
+                            </h2>
+                            <p>
+                                OSTATNIA TAKA NOC
+                            </p>
+                            <p>
+                                Przyjaciółka już po kursie tańca, po przymiarkach i gotowa do ślubu? Nie! Jeszcze wieczór panieński! W ramach before’u zabierz ją na roller disco, żeby nigdy nie zapomniała, że najlepiej bawi się właśnie z przyjaciółkami. 
+                            </p>
+                            <p><a data-toggle="collapse" data-target="#maids">Czytaj więcej...</a></p>
+                            <div class="collapse" id="maids">
+                                <p>Ty, panna młoda i Wasze przyjaciółki macie zapewnione:</p>
+                                <div class="pl-3">
+                                    <ul style="list-style-type: disc">
+                                        <li>Specjalną lożę na ten wieczór</li>
+                                        <li>Tyle słodkości, ile dusza zapragnie, żeby osłodzić ostatnie dni wolności przyszłej panny młodej</li>
+                                        <li>Wejście na tor i wrotki w kolorach, jakie Wam się spodobają</li>
+                                        <li>Możecie wnieść: tort, przekąski itp. (do ustalenia)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-                <div class="row no-gutters mt-3 pb-3">
-            <div class="col-10 offset-1">
-                <div class="row">
-                    <div class="col-3">
-                        <img class="img-fluid" src="../Images/offer_learn.jpg" />
+            <div class="row no-gutters">
+                <div class="col-10 offset-1">
+                    <div class="row">
+                        <div class="col-3">
+                            <img class="img-fluid" src="../Images/wywrotkaDefault.png" />
+                        </div>
+                        <div class="col-9">
+                            <h2>Imprezy prywatne
+                            </h2>
+                            <p>
+                                ŚWIATŁA, KAMERA, AKCJA. TEGO W POZNANIU JESZCZE NIE BYŁO
+                            </p>
+                            <p>
+                                Nie krępuj się i obejmij dowodzenie nad Wywrotką na jeden szalony wieczór. Jeżeli robisz naprawdę dobrą imprezę, a do pełni szczęścia brakuje Ci tylko klimatycznej przestrzeni i motywu, który rozrusza Twoich ludzi, jesteś w dobrym miejscu.
+                            </p>
+                            <p><a data-toggle="collapse" data-target="#private">Czytaj więcej...</a></p>
+                            <div class="collapse" id="private">
+                                <div class="pl-3">
+                                    <ul style="list-style-type: disc">
+                                        <li>Podczas dużych imprez tor jest wyłącznie do Twojej dyspozycji</li>
+                                        <li>Nie oferujemy własnego ciepłego cateringu, ale chętnie pomożemy zorganizować się firmie wybranej przez Ciebie</li>
+                                        <li>Miejsca raczej nie zabraknie - na torze mieści się do 50 osób, a w szatni czeka 100 par wrotek w 22 rozmiarach.</li>
+                                        <li>Daj nam znać, jeżeli masz jakieś specjalne pomysły, a my coś wymyślimy, żeby je zrealizować.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-9">
-                        <h2>Warsztaty nauki jazdy
-                        </h2>
-                        <p>
-                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                        </p>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
-                        </p>
-                        <p><a href="#">więcej...</a></p>
+                </div>
+            </div>
+            <div class="row no-gutters" style="display:none;">
+                <div class="col-10 offset-1">
+                    <div class="row">
+                        <div class="col-3">
+                            <img class="img-fluid" src="../Images/wywrotkaDefault.png" />
+                        </div>
+                        <div class="col-9">
+                            <h2>Warsztaty nauki jazdy
+                            </h2>
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                            </p>
+                            <p>
+                               Brak opisu.
+                            </p>
+                            <p><a data-toggle="collapse" data-target="#training">Czytaj więcej...</a></p>
+                            <div class="collapse" id="training">
+                                <p>
+                                    
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
 </asp:Content>

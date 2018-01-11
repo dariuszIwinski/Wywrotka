@@ -80,12 +80,10 @@
                 <div class="col-8 offset-3 col-md-1 offset-md-1 p-0">
                     <ul class="navbar-nav navbar-right mt-2 md-0">
                         <li class="nav-item pt-1 pb-1">
-                            <a class="nav-social-a" href="#">
+                            <a class="nav-social-a p-2" href="https://www.facebook.com/WrotkarniaWywrotka/">
                                 <i class="fa fa-facebook-square"></i>
                             </a>
-                        </li>
-                        <li class="nav-item pt-1 pb-1">
-                            <a class="nav-social-a" href="#">
+                            <a class="nav-social-a p-2" href="https://www.instagram.com/wrotkarnia.wywrotka/">
                                 <i class="fa fa-instagram"></i>
                             </a>
                         </li>
@@ -115,7 +113,7 @@
                 </div>
             </div>
         </div>
-        <div id="galleries" runat="server"></div>
+        <div id="gallerisContainer" runat="server"></div>
 
 
     </div>
@@ -132,8 +130,12 @@
 
         </div>
     </div>
-    <script src="Scripts/jquery-3.2.1.js" type="text/javascript"></script>
-    <script src="Scripts/bootstrap.min.js"></script>
+      <%--scripts--%>
+        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    
+
     <script>
 
         //wyswietla modal z powiększonym zdjęciem

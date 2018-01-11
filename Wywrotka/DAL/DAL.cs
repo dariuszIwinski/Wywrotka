@@ -19,7 +19,7 @@ namespace Wywrotka
 
             if (localOrProduction == "local")
             {
-                connString = ConfigurationManager.ConnectionStrings["WywrotkaDBLocal"].ConnectionString;
+                connString = ConfigurationManager.ConnectionStrings["WywrotkaDBProduction"].ConnectionString;
             }
             else if (localOrProduction == "production")
             {
@@ -36,7 +36,7 @@ namespace Wywrotka
             galleries.Columns.Add("Name");
             try
             {
-                string connString = GetConnectionString("local");
+                string connString = GetConnectionString("production");
 
                 string queryGetGaleries = "SELECT ID, Name FROM dbo.galleries WITH(NOLOCK)";
 
@@ -65,7 +65,7 @@ namespace Wywrotka
 
             try
             {
-                string connString = GetConnectionString("local");
+                string connString = GetConnectionString("production");
 
                 string queryGetImagesHeaders = "SELECT ID, GalleryID, Type, ColumnNo, Description FROM dbo.images WITH(NOLOCK)";
 
@@ -90,7 +90,7 @@ namespace Wywrotka
             pictures.Columns.Add("Description");
             try
             {
-                string connString = GetConnectionString("local");
+                string connString = GetConnectionString("production");
 
                 string queryGetPicturesFromGallery = "SELECT ID, Description FROM dbo.images WITH(NOLOCK) WHERE GalleryID = @galleryId";
 

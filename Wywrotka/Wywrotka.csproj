@@ -23,6 +23,8 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -32,6 +34,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <LangVersion>default</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -50,28 +53,27 @@
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Site\Admin\AdminLogin.aspx" />
-    <Content Include="Site\Admin\EventsManger.aspx" />
-    <Content Include="Site\Admin\Pictures.aspx" />
+    <Content Include="Images\wywrotkaDefault.png" />
+    <Content Include="Site\Admin\administration.aspx" />
     <Content Include="Site\contact.aspx" />
+    <Content Include="Site\error.aspx" />
     <Content Include="Styles\css\fa\css\font-awesome.css" />
     <Content Include="Styles\css\fa\css\font-awesome.min.css" />
     <Content Include="Styles\css\fa\fonts\fontawesome-webfont.svg" />
@@ -83,32 +85,13 @@
     <Content Include="Site\events.aspx" />
     <Content Include="Site\gallery.aspx" />
     <Content Include="Site\GoogleCalendarStyled.html" />
-    <Content Include="Images\bg1920.jpg" />
-    <Content Include="Images\birthday_party.png" />
-    <Content Include="Images\bride_rollers.jpg" />
     <Content Include="Images\dottedLine.png" />
-    <Content Include="Images\dottedLine_first.png" />
     <Content Include="Images\dottedLine_reverse.png" />
-    <Content Include="Images\elipseWywrotka.png" />
     <Content Include="Images\favicon.png" />
-    <Content Include="Images\heading_background.png" />
-    <Content Include="Images\img100.jpg" />
-    <Content Include="Images\img101.png" />
-    <Content Include="Images\img102.jpg" />
-    <Content Include="Images\img103.png" />
-    <Content Include="Images\img104.jpg" />
-    <Content Include="Images\logo_black.png" />
-    <Content Include="Images\oartyyyyy.jpg" />
-    <Content Include="Images\offer_learn.jpg" />
-    <Content Include="Images\old_rollers.jpg" />
-    <Content Include="Images\rollers.jpg" />
-    <Content Include="Images\tlo.png" />
     <Content Include="Images\wywrotka_logo.png" />
     <Content Include="Styles\css\navigation.css" />
     <Content Include="Site\index.aspx" />
     <Content Include="Scripts\jqueryAppear.js" />
-    <Content Include="Scripts\tether.js" />
-    <Content Include="Scripts\utils.js" />
     <Content Include="Site\offer.aspx" />
     <Content Include="packages.config" />
     <Content Include="Styles\css\bootstrap\bootstrap-grid.css.map" />
@@ -117,7 +100,6 @@
     <Content Include="Styles\css\bootstrap\bootstrap-reboot.min.css.map" />
     <Content Include="Styles\css\bootstrap\bootstrap.css.map" />
     <Content Include="Styles\css\bootstrap\bootstrap.min.css.map" />
-    <Content Include="Scripts\jquery-3.2.1.min.map" />
     <Content Include="Site\rules.aspx" />
     <Content Include="Site\SiteMaster.Master" />
     <Content Include="Styles\fonts\frino.ttf" />
@@ -181,39 +163,21 @@
     <Content Include="Styles\css\bootstrap\bootstrap-reboot.min.css" />
     <Content Include="Styles\css\bootstrap\bootstrap.css" />
     <Content Include="Styles\css\bootstrap\bootstrap.min.css" />
-    <Content Include="Images\daisy.jpg" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Styles\css\main.css" />
-    <Content Include="Images\texture_background.jpg" />
-    <Content Include="Scripts\jquery-3.2.1.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BL\Event.cs" />
-    <Compile Include="Site\Admin\AdminLogin.aspx.cs">
-      <DependentUpon>AdminLogin.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Site\Admin\AdminLogin.aspx.designer.cs">
-      <DependentUpon>AdminLogin.aspx</DependentUpon>
-    </Compile>
+    <Compile Include="BL\Gallery.cs" />
     <Compile Include="Site\Admin\ByteToImgEventsHandler.ashx.cs">
       <DependentUpon>ByteToImgEventsHandler.ashx</DependentUpon>
     </Compile>
-    <Compile Include="Site\Admin\EventsManger.aspx.cs">
-      <DependentUpon>EventsManger.aspx</DependentUpon>
+    <Compile Include="Site\Admin\administration.aspx.cs">
+      <DependentUpon>administration.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Site\Admin\EventsManger.aspx.designer.cs">
-      <DependentUpon>EventsManger.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Site\Admin\Pictures.aspx.cs">
-      <DependentUpon>Pictures.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Site\Admin\Pictures.aspx.designer.cs">
-      <DependentUpon>Pictures.aspx</DependentUpon>
+    <Compile Include="Site\Admin\administration.aspx.designer.cs">
+      <DependentUpon>administration.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site\contact.aspx.cs">
       <DependentUpon>contact.aspx</DependentUpon>
@@ -223,6 +187,13 @@
       <DependentUpon>contact.aspx</DependentUpon>
     </Compile>
     <Compile Include="DAL\DAL.cs" />
+    <Compile Include="Site\error.aspx.cs">
+      <DependentUpon>error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site\error.aspx.designer.cs">
+      <DependentUpon>error.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Site\events.aspx.cs">
       <DependentUpon>events.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

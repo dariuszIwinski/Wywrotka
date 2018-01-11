@@ -23,7 +23,9 @@ body, html {
     height: 100%;
 }
 
-
+.center-text{
+    text-align:center;
+}
 
 
 .h3 {
@@ -119,14 +121,14 @@ body, html {
 }
 
 
-.footer a i {
-    font-size: 2em;
-    color: white;
-}
-
-    .footer a i:hover {
-        color: rgb(238,92,160);
+    .footer a i {
+        font-size: 2em;
+        color: white;
     }
+
+        .footer a i:hover {
+            color: rgb(238,92,160);
+        }
 
 /*parallax*/
 .parallax {
@@ -176,10 +178,13 @@ a, a:hover, a:active {
 
 
 .header-background {
-    background: rgb(16,23,57);
-    color: white;
+    color: rgb(16,23,57);
     width: 100%;
     padding: 1%;
+    padding-top: 1.5em;
+    text-shadow: -1px 0 rgb(238,92,160), 0 1px rgb(238,92,160), 1px 0 rgb(238,92,160), 0 -1px rgb(238,92,160);
+    font-weight: 400;
+    font-size: 1.3em;
 }
 
 .contant-elements {
@@ -207,7 +212,7 @@ a, a:hover, a:active {
 }
 
     #about_logo_black:hover {
-        background-image: url('../../img/wywrotka_logo.png');
+        background-image: url('../../Images/wywrotka_logo.png');
     }
 
 @media (min-width: 1000px) {
@@ -324,18 +329,60 @@ hr {
     background-color: white;
 }
 
-.elipsa {
-    width: 400px;
-    height: 200px;
-    margin-bottom: 0;
-    margin-top: 0;
-    border-radius: 200px / 100px;
-    -moz-border-radius: 100px / 50px;
-    -webkit-transform: rotate(-10deg);
-    -moz-transform: rotate(-10deg);
-    -o-transform: rotate(-10deg);
-    transform: rotate(-10deg);
+@media (max-width: 800px) {
+    .elipsa {
+        width: 200px;
+        height: 100px;
+        margin-bottom: 0;
+        margin-top: 0;
+        border-radius: 100px / 50px;
+        -moz-border-radius: 50px / 25px;
+        -webkit-transform: rotate(-10deg);
+        -moz-transform: rotate(-10deg);
+        -o-transform: rotate(-10deg);
+        transform: rotate(-10deg);
+        margin: 5%;
+        border: dotted 2px rgb(238,92,160)
+    }
+    .eplisa-text {
+        color: white;
+        padding-top: 1.5em;
+        text-shadow: -1px 0 rgb(238,92,160), 0 1px rgb(238,92,160), 1px 0 rgb(238,92,160), 0 -1px rgb(238,92,160);
+        font-weight: 400;
+        font-size: 1.3em;
+    }
 }
+
+@media (min-width: 800px) {
+    .elipsa {
+        margin: 5%;
+        border: dotted 2px rgb(238,92,160);
+        width: 400px;
+        height: 200px;
+        margin-bottom: 0;
+        margin-top: 0;
+        border-radius: 200px / 100px;
+        -moz-border-radius: 100px / 50px;
+        -webkit-transform: rotate(-10deg);
+        -moz-transform: rotate(-10deg);
+        -o-transform: rotate(-10deg);
+        transform: rotate(-10deg);
+    }
+    .eplisa-text {
+        color: white;
+        padding-top: 2.0em;
+        text-shadow: -1px 0 rgb(238,92,160), 0 1px rgb(238,92,160), 1px 0 rgb(238,92,160), 0 -1px rgb(238,92,160);
+        font-weight: 400;
+        font-size: 2.5em;
+    }
+}
+
+.center-inner-divs {
+    width: 80%;
+    margin: 0 auto;
+}
+
+
 
 .flip {
     -moz-transform: scaleX(-1);
@@ -352,19 +399,16 @@ hr {
     text-align: justify;
 }
 
-.list-ordered li
-{
-    padding: 0.5em;
-}
-
-.list-ordered li ol
-{
-    list-style: lower-latin;
-    padding-left: 1em;
-}
-    .list-ordered li ol li {
-        padding: 0;
-        padding-left: 0.5em;
+    .list-ordered li {
+        padding: 0.5em;
     }
 
+        .list-ordered li ol {
+            list-style: lower-latin;
+            padding-left: 1em;
+        }
 
+            .list-ordered li ol li {
+                padding: 0;
+                padding-left: 0.5em;
+            }

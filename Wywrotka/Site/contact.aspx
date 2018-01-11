@@ -38,12 +38,10 @@
                 <div class="col-8 offset-3 col-md-1 offset-md-1 p-0">
                     <ul class="navbar-nav navbar-right mt-2 md-0">
                         <li class="nav-item pt-1 pb-1">
-                            <a class="nav-social-a" href="#">
+                            <a class="nav-social-a p-2" href="https://www.facebook.com/WrotkarniaWywrotka/">
                                 <i class="fa fa-facebook-square"></i>
                             </a>
-                        </li>
-                        <li class="nav-item pt-1 pb-1">
-                            <a class="nav-social-a" href="#">
+                            <a class="nav-social-a p-2" href="https://www.instagram.com/wrotkarnia.wywrotka/">
                                 <i class="fa fa-instagram"></i>
                             </a>
                         </li>
@@ -69,23 +67,23 @@
             <h3 class="text-center w-100 m-3">Pisz! Dzwoń! Przybywaj!</h3>
             <div class="col-8 offset-3 col-md-3 offset-md-3 contant-elements">
                 <div class="fa fa-phone-square"></div>
-                <a href="tel:#">+48 777 777 777</a>
+                <a href="tel:#">+48 572 291 843</a>
             </div>
             <div class="col-8 offset-3 col-md-3 offset-md-0 contant-elements">
                 <div class="fa fa-envelope"></div>
-                <a href="#">wrotka@wywrotka.pl</a>
+                <a href="mailto:wwwywrotka@gmail.com">wwwywrotka@gmail.com</a>
             </div>
         </div>
         <div class="row no-gutters mt-5" style="margin-top: 1em;">
             <h3 class="text-center w-100 m-3">Tu nas znajdziesz</h3>
-            <div class="col-6 offset-3 text-center">
+            <div class="col-6 offset-3">
                 <%-- mapa google --%>
                 <div class="iframe-container">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m21!1m12!1m3!1d4871.646504444444!2d16.976447628322237!3d52.37362481914683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m6!3e6!4m0!4m3!3m2!1d52.373613899999995!2d16.9805822!5e0!3m2!1spl!2sus!4v1501538655743" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
                 </div>
 
             </div>
-             <div class="col-6 offset-3 text-center mt-3">
+             <div class="col-6 offset-3 mt-3" style="text-align:center;">
                 <p style="font-weight: 500; font-size: 1.3rem;">Ul. Bolesława Krzywoustego 72<br />61-144 Poznań</p>
             </div>
             <div class="col-6 offset-3 text-center mt-3">
@@ -113,16 +111,16 @@
             <h3 class="text-center w-100 m-3">Więcej pytań?</h3>
             <div class="form-horizontal col-6 offset-3">
                 <div class="form-group">
-                    <input type="text" class="form-control" id="txtContactName" placeholder="Podaj imię i nazwisko" />
+                    <asp:TextBox class="form-control" id="txtContactName" placeholder="Podaj imię i nazwisko" runat="server"></asp:TextBox>
                 </div>
                 <div class="form-group">
-                    <input type="email" class="form-control" id="txtContactEmail" placeholder="Podaj swój adres email" />
+                    <asp:TextBox  class="form-control" id="txtContactEmail" placeholder="Podaj swój adres email" runat="server"></asp:TextBox>
                 </div>
                 <div class="form-group ">
-                    <textarea class="form-control" id="txtContactMessage" placeholder="Wpisz treść wiadomości"></textarea>
+                    <asp:TextBox class="form-control" id="txtContactMessage" placeholder="Wpisz treść wiadomości" runat="server"></asp:TextBox>
                 </div>
                 <div class="text-center m-5">
-                    <input type="submit" class="btn btn-default w-100" value="Wyślij" />
+                    <asp:Button ID="btnSendEmail" OnClick="btnSendEmail_Click" class="btn btn-default w-100" runat="server" Text="Wyślij" />
                 </div>
             </div>
         </div>
@@ -139,5 +137,8 @@
             else
                 window.open("http://maps.google.com/maps?daddr=52.3736139,16.9805822&amp;ll=");
         }
+
+
+
 </script>
 </asp:Content>
